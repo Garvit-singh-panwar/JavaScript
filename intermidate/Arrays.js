@@ -39,7 +39,7 @@ console.log(numbers.includes(4));
 
 let courses = [
 
-    {no: 1, name : 'garvit'} ,
+    {no:1, name : 'garvit'} ,
     {no:2 , name : 'farhan'}
 
 ];
