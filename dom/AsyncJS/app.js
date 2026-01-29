@@ -174,7 +174,39 @@ let myData = {
 fetch("URL_HERE", myData);
         </pre>
         <p><b>Paid APIs:</b> If you use a "Pro" version of an API, you put your secret password (API Key) inside the <code>headers</code> so the server knows it's you!</p>
-    </div>`,  ];
+    </div>`
+
+    ,
+    `
+<div style="font-family: sans-serif; border-left: 5px solid #3498db; padding: 20px; background: #f0f7ff; line-height: 1.6; border-radius: 8px;">
+    <h2 style="color: #2980b9; margin-top: 0;">🎒 What is a Closure?</h2>
+    
+    <p>In simple words: A <b>closure</b> is a function that "remembers" its home. Even when it leaves home, it keeps a "backpack" full of the variables that were around it when it was created.</p>
+
+    <h3 style="color: #2c3e50;">What's happening in the code?</h3>
+    <ol>
+        <li><b>init()</b> creates a variable called <code>name</code>.</li>
+        <li>Inside <b>init</b>, we make a smaller function called <b>displayName</b>.</li>
+        <li>When <b>init</b> finishes, it hands over the <b>displayName</b> function to us.</li>
+        <li>Even though <b>init</b> is "gone," <b>displayName</b> still carries the <code>name</code> variable in its backpack!</li>
+    </ol>
+
+    <pre style="background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto;">
+function init() {
+    let name = "Firefox"; // The "toy" inside the room
+
+    function displayName() { 
+        console.log(name); // The "backpack" keeps the toy safe
+    }
+
+    return displayName; // Handing over the function
+}
+
+const myClosure = init(); 
+myClosure(); // Output: "Firefox"
+    </pre>
+</div>`
+];
 
 let i = 1;
 txt.innerHTML = lesson[0];
