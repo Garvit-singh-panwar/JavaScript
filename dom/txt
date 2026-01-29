@@ -1,0 +1,174 @@
+💡 Generative AI Workshop Resource Document
+This document summarizes the key takeaways, tools, frameworks, and insights presented in the Generative AI Workshop mentored by Vaibhav Sisinty.
+🧠 The Power and Future of AI
+Fun Fact!
+99% of people think AI is only ChatGPT or Copilot.
+This is a major concern, as AI is already 100x more powerful than most people realize.
+The goal of the workshop is to show the true power of AI.
+AI's Role (Current Perception vs. Reality)
+Current Perception: AI is seen as your super smart assistant.
+The Future: This won't be the case for long. AI is coming for all our jobs.
+The AI Job Massacre Has Already Begun
+The presentation highlights several reports and layoffs related to the rise of AI:
+Prediction: The presenter predicts AI will take away at least 4 out of 5 jobs in the next few years, potentially within 2-3 years.
+Layoff Examples:
+Intel: Fired 15,000 employees while intensifying focus on AI.
+Microsoft: Laid off 1,500 workers, blaming the "AI Wave".
+Dell: Fired 12,500 employees to focus on AI.
+Meta: Cut 600 jobs in the latest layoff; employees are now using AI to write performance reviews.
+Corporate Giants (Amazon, UPS, Target): Announced layoffs totaling over 60,000 jobs cut this year.
+AI Agent Outlook: Sam Altman (OpenAI CEO) says AI agents, capable of complex tasks, will enter the workforce in 2025.
+WEF Report: AI is projected to replace 85 million jobs by 2025.
+
+
+How to Stay Relevant
+The person who keeps their job will have to be a "10x person" who knows the way around AI better than others.
+Jensen Huang (NVIDIA): "AI isn't coming to take your job. Someone using AI is coming to take your job". He advises that the first thing everyone should do is learn to use AI to augment their own productivity.
+🗺️ AI For Yourself (AIY) Framework
+The workshop introduces the AIY (AI For Yourself) framework to break down AI use cases into different buckets.
+The five core buckets of the AIY framework are:
+AI for core skills you need
+AI for Your Productivity
+AI for Your Learning
+AI for Your Creativity
+AI for Your Career
+
+1. AI for Core Skills You Need (Mastering Prompt Engineering)
+The foundation of using AI effectively is Mastering Prompt Engineering.
+The Magic Prompt Formula consists of four key components:
+Context
+Task
+Instruction
+Example/Data
+
+
+Example Prompt Breakdown: A good prompt uses a detailed structure, including setting the AI's persona (Context), defining the goal (Task), and adding specific requirements and style details (Instruction/Data).
+
+
+Demo Use Case: Writing an email to 10k subscribers inviting them for the Generative AI workshop.
+
+
+Tool Highlight: multi
+This platform allows you to pose One Question to Every AI Model (Claude, GPT, Gemini) side by side to compare answers.
+
+
+
+Tool Highlight: perplexity
+Used as a "Research intern at your service".
+
+
+Tool Highlight: Grok
+Mentioned for "Social research using AI".
+
+2. AI for Your Productivity (Work Smarter, Not Harder)
+Challenge: 80% of people deal with Excel sheets every day, which consumes a lot of time.
+Use Cases:
+Using AI for Excel/Spreadsheets.
+Building stunning data dashboards.
+Tool Highlight: Claude
+Mentioned for building data dashboards.
+Tool Highlight: Gemini
+An AI tool that can build slides/presentations for you in minutes.
+
+3. AI for Your Learning (Upgrade Your Brain with AI)
+Goal: Learn and absorb things faster from the internet.
+Use Cases: Summarize anything on the web and chat with it.
+Tool Highlight: NotebookLM
+An AI buddy to learn things quickly.
+
+4. AI for Your Creativity (From idea to creation in seconds)
+The focus is on creation with no design or code needed.
+Tool Highlight: Phot.AI
+Used to generate images using your "instant picasso".
+Tool Highlight: rollout
+Can build websites in just one click.
+
+5. AI for Your Life & Career (Your Personal Operating System)
+This is where AI goes beyond being a tool and becomes your personal operating system.
+Use Case: Apply for jobs using AI.
+Tool Highlight: @comet
+Mentioned for putting your life on autopilot mode.
+General Use Case: Automate everything using AI browsers.
+✅ Summary of Tools and Key Concepts Learned
+The following is a list of concepts and tools covered in the workshop:
+Prompt engineering (Magic Formula: Context, Task, Instruction, Example/Data).
+AI For Research.
+multi for comparing AI model answers side-by-side.
+AI for Productivity.
+Numerous AI for Excel.
+Claude for data dashboards.
+Gemini for building presentations.
+Emily (mentioned for summarizing anything on the web).
+NotebookLM for learning things superfast.
+Phot.AI as your instant picasso for generating images.
+Applying for Jobs using AI.
+Automating everything using AI browsers.
+
+Here are all the prompts that have been used : 
+
+Magic Prompt Formulae & Email Crafting
+
+Email to subscribers :
+Write an email to 10k subscribers inviting them to the Generative AI 2-day Mastermind by Outskill. 
+—
+You are an experienced email copywriter who has written for brands like Ogilvy. 
+
+Write a launch email for a new workshop of Outskill on Generative AI. Write an email inviting people who have signed up for the workshop by Vaibhav Sisinty.
+
+Make the copy over the top fun and designed to resonate with an audience of 25+ year-olds trying to figure their way around ChatGPT. Focus A LOT on users working in marketing, tech, product, and design roles and how the workshop will be helpful for them. Talk about the other interesting things that will be covered like hacks, tools, and prompt collections as bonuses.
+
+Include a review from someone who said that the session is a no-brainer for anyone who wants to stay relevant in 2025 and beyond. It’s mind-blowing
+
+
+
+Research Intern at Your Service
+Tools Used: Perplexity
+
+I am interested in gaining a comprehensive understanding of the growing coffee market in India. Could you provide an in-depth analysis of the current state of the coffee market in India? Specifically, I would like to know:
+
+1. What is the overall size and growth rate of the coffee market in India right now? Are there any notable trends or projections for the future?
+2. Who are the major players in the Indian coffee market? Please include both domestic and international companies, and highlight any key differences in their strategies or market shares.
+3. Is there potential for new businesses to enter the Indian coffee market? What are the barriers to entry, and what opportunities exist for new entrants?
+4. What are the various channels through which coffee is sold in India? For example, how significant are retail stores, online platforms, cafes, and other distribution methods?
+5. What types of coffee products are most popular among Indian consumers? Are there specific preferences for certain varieties (e.g., instant coffee, ground coffee, specialty coffee)?
+6. How do cultural and regional differences within India influence coffee consumption patterns?
+7. Are there any recent innovations or emerging trends in the Indian coffee market that are worth noting?
+8. What are the consumer demographics for coffee in India? How do factors such as age, income level, and urban vs. rural location impact coffee consumption?
+9. How does the Indian coffee market compare to other major coffee markets globally in terms of growth, consumer preferences, and competitive landscape?
+
+
+
+
+
+Gemini Slides Prompt
+
+Add Canvas to Gemini, and attach the doc (this is coffee research doc, and give the prompt to generate the slides)
+
+
+Doc: https://docs.google.com/document/d/1OaGe2ADkkEw99w3hTbN0UAFVdxciHJ6eRyNFjq3Z0EA/edit?tab=t.0#heading=h.x2grbvj8jgr
+
+Persona & Context: The presentation is for a leadership team review (C-Suite and VPs). The tone should be confident, concise, and focused on strategic impact.
+Format & Structure:
+Slide 1: Title Slide with Presenter and Date.
+Slide 2: Executive Summary / Key Takeaways (Limit to 3 high-level bullet points).
+Slides 3-7: Detailed breakdown of the main sections in the document.
+Slide 8: Analysis of Risks and Challenges.
+Slide 9: Clear, Actionable Next Steps.
+Slide 10: Q&A / Thank You.
+Focus on: Prioritizing the data, conclusions, and recommendations. Use a minimal text design, emphasizing bold headlines and visual placeholders for charts/graphs where appropriate.
+
+
+Links to All The Tools Used : 
+
+GetMulti : https://getmulti.ai/
+Perplexity AI : https://www.perplexity.ai/ 
+Grok AI : https://grok.com/ 
+Numerous AI : https://numerous.ai/
+Claude AI : https://claude.ai/ 
+Gemini AI : https://gemini.google.com/app 
+Emily AI : https://meetemily.ai/
+Notebook LM : https://notebooklm.google/
+Phot AI : https://www.phot.ai/ 
+Rollout : https://rollout.site/
+Perplexity Comet : https://outskill.link/perplexity-comet
+
