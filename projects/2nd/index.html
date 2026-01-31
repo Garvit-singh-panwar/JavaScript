@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="wrapper" class="w-[100vw] h-[100vh] bg-[#333] flex  items-center justify-center ">
+        <div id="card-wrapper" class=" w-[45%] h-[100%] relative  flex items-center justify-center">
+            
+            <div id="redCircle" class="  w-[130px] h-[130px] bg-[#f00] absolute  top-5 left-10  rounded-full shadow-[0_0_10px_10px_rgba(255,00,00,0.5)]">
+
+            </div>
+            <div id="purCircle" class="w-[200px] h-[200px] bg-[#A020F0] absolute bottom-10 right-10 rounded-full  shadow-[0_0_10px_10px_rgba(160,32,240,0.5)]">
+
+            </div>
+            <div id="card" class="w-[55%] h-[60%] bg-white/10 backdrop-blur-md z-0 blur-20px border border-white/30  rounded-xl flex flex-col  gap-6 items-center text-[#ccc] ">
+                <div id="photo" class=" bg-white w-[115px] h-[115px] rounded-full mt-[15%]" ></div>
+
+                <h2 id="Name" class="text-[25px]"> Garvit Singh Panwar</h2>
+
+                <p id="identity" class="text-[14px]"> Full stack , developer</p>
+
+                <div id="options" class="h-[10%] w-[80%] flex justify-center items-center gap-6">
+                    <button id="share" class="h-[70%] w-[40%] p-3 border-2 border-white text-[10px] flex justify-center items-center hover:bg-white hover:border-[#777] hover:text-[#000] duration-300 rounded-md font-semibold"><i class="fa-solid fa-share"></i> Share My Profile</button>
+                    <button id="follow" class="h-[70%] w-[40%] p-3 border-2 border-white  text-[10px] text-center flex justify-center items-center hover:bg-white hover:text-[#000] hover:border-[#777] duration-300 font-semibold rounded-md"> Follow Me </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="modal" class="absolute w-[500px] h-[250px] bg-black/70 backdrop-blur-md text-white flex flex-col justify-between p-2 rounded-md border border-1-white ">
+            <div id="modalHead" class="flex justify-between gap-6 p-3 border-b-2 h-[30%] w-[100%]"> <h2 class="font-bold text-[25px] px-2 ">Share My Profile</h2> <button id="closeModal" class="font-bold text-[25px]"> <i class="fa-solid fa-xmark"></i> </button>
+            </div>
+            <h3 class="p-2 font-bold h-[30%] w-[100%]">Share this vai</h3>
+            <div id="shareIcon" class="h-[60%] w-[100%] flex flex-col items-center">
+                
+            <div id="apps " class="flex items-center  justify-between w-[90%] h-[50%] text-[35px]">
+                    <a href="" class="w-[60px] h-[60px] rounded-full border border-[blue] flex items-center  justify-center text-[blue]"><i class="fa-brands fa-facebook-f"></i></a> 
+                    <a href="" class="w-[60px] h-[60px] rounded-full border border-[cyan] flex items-center  justify-center text-[cyan]"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="w-[60px] h-[60px] rounded-full border border-[red] flex items-center  justify-center text-[red]"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="w-[60px] h-[60px] rounded-full border border-[lightgreen] flex items-center  justify-center text-[lightgreen]"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="" class="w-[60px] h-[60px] rounded-full border border-[cyan] flex items-center  justify-center text-[cyan]"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            </div>
+
+        </div>
+    
+
+    </div>
+
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

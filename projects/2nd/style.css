@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: redMove 3s timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes redMove {
+    to {
+        transform: scale(1.1);
+        left: 12%;   
+    }
+}
+
+#photo{
+    background-image: url(devFace.jpg);
+      background-size: cover;
+  background-position: center;
+  border: 1px solid white;
+}
+
+#redCircle{
+animation: redMove 2s infinite alternate ease-in-out;
+}
+
+#purCircle{
+    animation: purpleMove 2s infinite alternate ease-in-out;
+}
+
+@keyframes purpleMove {
+    to {
+        transform: scale(1.1);
+        right: 12%;   
+    }
+}
+
+.active{
+    animation: smallToBig 1s ease-out;
+}
+
+@keyframes smallToBig {
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.none{
+    display: none;
+}
