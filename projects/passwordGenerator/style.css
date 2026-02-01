@@ -1,0 +1,19 @@
+.white{
+    background-color: #fff;
+    box-shadow: 0 0 2px 2px rgba(255,255,255,0.5);
+}
+
+.yellow{
+    background-color: #d6d61d;
+    box-shadow: 0 0 2px 2px rgba(255,255,0,0.5);
+}
+
+.red{
+    background-color: #ff0000;
+    box-shadow: 0 0 2px 2px rgba(255,0,0,0.5);
+}
+.green{
+    background-color: #0f0;
+    box-shadow: 0 0 2px 2px rgba(0,255,0,0.5);
+}
+
