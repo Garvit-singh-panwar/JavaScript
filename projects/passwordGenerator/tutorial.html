@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <!-- I wrote this code or watch this tutorial after doing the previous code by my self  -->
+
+    <div class="container">
+
+        <h1>Password Generator</h1>
+    
+        <div class="display-container">
+            
+            <input readonly placeholder="Password" class="display" data-passwordDisplay >
+
+            <button data-copy>
+
+                <span data-copyMsg ></span>
+                <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+
+            </button>
+
+        </div>
+
+
+        <div class="input-container">
+
+            <!-- password length section -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
+                </div>
+
+                <!-- slider -->
+                <input type="range" class="slider" step="1" min="1" max="20" data-lengthslider>
+
+
+                <!-- checkboxes -->
+
+                <div>
+                    <input type="checkbox" id="Uppercase">
+                    <label for="Uppercase"> Include Uppercase letters</label>
+                </div>
+
+                
+                <div>
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase"> Include lowercase letters</label>
+                </div>
+
+                
+                <div>
+                    <input type="checkbox" id="Number">
+                    <label for="Number"> Include Number </label>
+                </div>
+
+                
+                <div>
+                    <input type="checkbox" id="SpecialChar">
+                    <label for="SpecialChar"> Include SpecialChar </label>
+                </div>
+
+                
+                <!-- strength sec -->
+                <div class="strenght-container">
+
+                    <p>Strength</p>
+                    <div class="indicator" data-indicator></div>
+
+                </div>
+
+                <!-- generate password -->
+
+                <button class="generateButton">Generate Password</button>
+
+        </div>
+
+
+    </div>
+
+   
+    
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- this file logic is given in the tutorial -->
+     <script src="./Code.js"></script>
+</body>
+</html>

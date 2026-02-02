@@ -1,3 +1,6 @@
+//all  the code and logic given by me 
+
+
 let rangeVal = document.querySelector("#range-value");
 
 let strengthpower = document.querySelector("#strength_power");
@@ -312,6 +315,30 @@ generateBtn.addEventListener('click' , ()=>{
                     (newChar >= 97 && newChar <= 122)
                     || // ! uppercase 
                     (newChar >= 65 && newChar <= 90 )    
+                );
+                GeneratedPassword.value += String.fromCodePoint(newChar);
+                
+                i++;
+            }
+            strengthpower.classList.remove("white" , "green" , "red");
+            strengthpower.classList.add("yellow");
+
+            break;
+
+        }
+
+        // only uppercase and lowercase
+        case 3:{
+            
+                GeneratedPassword.value = "";
+
+            while(i != range){
+
+                let newChar = 0;
+                do {
+                    newChar = Math.floor(Math.random() * 57) + 65;  
+                } while ( 
+                    (newChar > 90 && newChar < 97)    
                 );
                 GeneratedPassword.value += String.fromCodePoint(newChar);
                 
