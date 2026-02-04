@@ -28,6 +28,12 @@ function handleSlider(){
     inputslider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
 
+    // handle slider background 
+
+    const min = parseInt(inputslider.min);
+    const max = parseInt(inputslider.max);
+    inputslider.style.backgroundSize = ((passwordLength - min)*100 / (max - min)) + "% 100%";
+    
 }
 
 function setIndicator(color) {
@@ -119,7 +125,7 @@ async function copyContent(){
 
     setTimeout(()=>{
         copyMsg.classList.remove("active");
-    },2000);
+    },1000);
 
 }
 
@@ -178,7 +184,7 @@ generateBtn.addEventListener('click' , ()=>{
         handleSlider();
     }
 
-    console.log("handle slider");
+    // console.log("handle slider");
     // lets start the journey to find new password
 
     password = "";
@@ -211,7 +217,7 @@ generateBtn.addEventListener('click' , ()=>{
     // the length 3 password is compulsory
 
     
-    console.log("comp addition");
+    // console.log("comp addition");
 
     for(let i = 0 ; i < funArr.length; i++){
         password += funArr[i]();
@@ -219,7 +225,7 @@ generateBtn.addEventListener('click' , ()=>{
 
     // remaining Addition
     
-    console.log("remaining add");
+    // console.log("remaining add");
 
     for(let i = 0 ; i < passwordLength - funArr.length ; i++){
         let randomIndex = getRandomInteger(0,funArr.length);
@@ -229,13 +235,13 @@ generateBtn.addEventListener('click' , ()=>{
 
 
     
-    console.log("shuffle");
+    // console.log("shuffle");
 
     // shuffle the password
     password = shufflePassword(Array.from(password));
 
     
-    console.log("show ui");
+    // console.log("show ui");
 
     // show in UI
     passwordDisplay.value = password;
@@ -243,7 +249,7 @@ generateBtn.addEventListener('click' , ()=>{
     // calculate strength
 
     
-    console.log("strength calc");
+    // console.log("strength calc");
 
     calcStrength();
 
