@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(143deg,rgba(10, 10, 38, 1) 19%, rgba(63, 63, 115, 1) 57%, rgba(93, 117, 128, 1) 83%, rgba(112, 192, 212, 1) 100%);
+    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.tab-container{
+    display: flex;
+    max-width: 550px;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    width: 90%;
+}
+
+.userInfoContainer{
+    width: 90%;
+    max-width: 550px;
+}
+
+.grantLocationAccess{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    /* display: none; */
+}
+.grantLocationAccess img{
+    margin-top: 20px;
+}
+
+.grantLocationAccess button{
+    appearance: none;
+    background-color: rgba(225, 229, 245, 0.5);
+    color: white;
+    border-radius: 0.35rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 40px;
+    margin-top: 15px;
+}
+
+.grantLocationAccess.active{
+    display: flex;
+}
+
+.searchLoaction{
+    display: none;
+    max-width: 550px;
+    width: 90%;
+    justify-content: center;
+    align-items: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.searchLoaction input {
+    appearance: none;
+    flex-grow: 1; /* This tells the input: "Take all the leftover space" */
+    width: 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+}
+.searchLoaction button{
+    appearance: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(172, 246, 103, 0.824);
+    border-radius: 50%;
+}
+
+.searchLoaction.active{
+    display: flex;
+}
+
+
+.tab.current-tab{
+    background-color: rgba(225, 229, 245, 0.5);
+}
+
+
+.loadingContainer.active{
+    display: flex;
+}
+
+.weatherInfo{
+    display: none;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+    
+    
+.weatherInfo.active{
+    display: flex;
+}
+
+.weatherInfo .cityInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cityInfo p{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.weatherDesc{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.Temeprature{
+    font-size: 2.5rem;
+}
+
+.parameterContainer{
+    display: flex;
+    max-width: 550px;
+    width: 90%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.parameter{
+    max-width: 200px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 10px;
+}
+
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.parameter p:last-of-type{
+    font-size: 1.25rem;
+}
+
+.loadingContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.loadingContainer p{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

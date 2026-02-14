@@ -99,7 +99,7 @@ console.log(num);
 // 3. **
 // ArrayName.Splice(0 , Arrayname.length);
 
-// Combining and splicing an array 
+// Combining and slicing an array 
 
 // let combinedArray = ArrayName1.concat(ArrayName2)
 
