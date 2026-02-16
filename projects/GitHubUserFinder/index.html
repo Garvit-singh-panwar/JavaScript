@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./light.css" theme-css>
+   
+</head>
+<body>
+
+<section class="wrapper-userfinder">
+
+
+  
+        <section class="user-finder_header" >
+            <h1>DevDetective</h1>
+            <div class="theme">
+                <p data-theme-name>Dark</p>
+                <img src="./assets/dark_mode.png"  height="50px" width="50px" alt="next theme icon" icon-theme>
+                
+            </div>
+        </section>
+
+    
+        <form user-search_form >
+            <img src="./assets/search.png" height="25px" width="25px" alt="">
+            <input type="text" data-user_input placeholder="Enter a GitHub username...." >
+            <img src="./assets/cross.png"  height="20px" width="20px" style="background-size: contain; " crossIcon>
+            <button id="formBtn" type="submit">Search</button>
+
+        </form>
+
+        <section class="user-detail ">
+
+            <div class="user-profile">
+
+                <img src="" alt="" data-user_img height="100px" width="100px">
+                <div class="user-about">
+
+                    <div class="name-join">
+                        <p data-user_name>love babbar</p>
+
+                        <p data-join_date> joined 12/4/2002 </p>
+                    </div>
+
+                    <a class="github" href="" data-user_github>@lovebabbar</a>
+
+                    <p class="bio" data-user_bio>jo bhi likh do</p>   
+
+
+                </div>
+
+                
+                    
+            </div>
+
+            <div class="user-stats">
+
+                <!-- repos -->
+                <div class="stats">
+                    <p>Repos</p>
+                    <p data-repos>11</p>
+            
+                </div>
+
+
+                <!-- followers -->
+                <div class="stats">
+                    <p>Followers</p>
+                    <p data-followers>40</p>
+                        
+                </div>
+
+
+                <!-- following -->
+                <div class="stats">
+                    <p>Following</p>
+                    <p data-following>0</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="social_links">
+
+                <div class="location_twitter">
+                    <!-- location  -->
+                    <div>
+                        <img src="./assets/maps-and-flags.png" height="20px" width="20px" alt="">
+                        <p data-user-location></p>
+
+                    </div>
+
+                    <!-- twitter -->
+                    <div>
+                        <img src="./assets/twitter.png" height="20px" width="20px" alt="">
+                        <p data-twitter-link></p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- contribution -->
+
+                <div class="website">
+
+                    <!-- website -->
+                    <div>
+                        <img src="./assets/link.png" height="20px" width="20px" alt="">
+                        <a href="./" data-website-link> a</a>
+
+                    </div>
+
+                    <!-- company -->
+                    <div>
+                        <img src="./assets/building.png" height="20px" width="20px" alt="">
+                        <p data-company></p>
+
+                    </div>
+
+                </div>
+            </div>    
+
+        </section>
+
+        
+
+</section>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>

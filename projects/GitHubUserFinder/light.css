@@ -1,0 +1,45 @@
+.wrapper-userfinder{
+    background-color: #f6f8ff;
+}
+
+.user-finder_header h1{
+    color: #0079ff;
+}
+
+form{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#formBtn{
+    background-color: #0079ff;
+    color: white;
+}
+#formBtn:hover{
+    background-color: #0063D1;
+}
+
+.github{
+    color: #0079ff;
+}
+
+.user-detail{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.35rem;
+    color: #4b6a9b;
+}
+
+.name-join p:first-of-type{
+    color: #222731;
+    
+}
+
+.user-stats{
+    background-color: #e7f2ff;
+}
+
+
+.stats p:last-of-type{
+    color: #2b3442;
+}

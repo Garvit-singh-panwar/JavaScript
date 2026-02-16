@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+.wrapper-userfinder{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    /* background-color: black; */
+    /* color: aliceblue; */
+}
+
+.user-finder_header{
+    max-width: 550px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-finder_header h1{
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.theme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.theme p{
+    font-size: 0.55rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+form{
+    max-width: 550px;
+    height: 50px;
+    /* background-color: #fff; */
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+form input{
+    all: unset;
+    flex-grow: 1;
+    margin-left: 10px;
+    /* margin: 0px 80px 0px 10px; */
+}
+
+form button{
+    all: unset;
+    /* color: white; */
+    padding: 10px 20px;
+    /* margin-right: 7px; */
+    margin-left: 70px ;
+    border-radius: 7px;
+    /* background-color: blue; */
+}
+
+.user-detail{
+    /* color: rgb(89, 0, 255); */
+    margin-top: 20px;
+    max-width: 550px;
+    width: 90%;
+    /* background-color: aliceblue; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+}
+
+.active{
+    opacity: 1;
+}
+
+.user-about
+{
+    width: 70%;
+    height: 100%;
+    gap: 10px;
+}
+
+.user-profile{
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+
+.user-profile img{
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.user-profile{
+    width: 100%;
+}
+
+.bio{
+    margin-top: 20px;
+}
+
+
+
+
+.name-join{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    
+}
+
+.name-join p:first-of-type{
+    font-size: 1.25rem;
+    font-weight: 900;
+    word-spacing: 0.35rem;
+    letter-spacing: 2px;
+}
+
+.name-join p:last-of-type{
+    font-size: 0.65rem;
+    word-spacing: 0.35rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.github{
+    font-size: 0.85rem;
+}
+
+.bio{
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.user-stats{
+    display: flex;
+    height: 90px;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    /* background-color: #444; */
+    padding: 0px 50px 0px 30px;
+    border-radius: 0.35rem;
+    
+}
+.stats{
+    height: 60%;
+    width: 100px;
+}
+
+.stats p:first-of-type{
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.stats p:last-of-type{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.social_links{
+    margin-top: 40px;
+    width: 75%;
+    display: flex;
+    align-self: flex-end;
+    padding: 0 0 0 30px;
+}
+
+.location_twitter{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.location_twitter div{
+    display: flex;
+}
+
+.website{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.website div{
+    display: flex;
+}

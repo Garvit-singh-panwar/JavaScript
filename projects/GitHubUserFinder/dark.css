@@ -1,0 +1,42 @@
+.wrapper-userfinder{
+    background-color: #0f172a;
+}
+
+.user-finder_header {
+    color: #f8fafc;
+}
+
+form{
+    background-color: #1e293b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+form input{
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+form button{
+    background-color: #2563eb;
+    color: #cbd5e1;
+    
+}
+
+.user-detail{
+    background-color: #1e293b;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #94a3b8;
+}
+
+.name-join p:first-of-type{
+   color: #f8fafc;
+}
+
+.user-stats{
+    background-color: #334155;
+}
+
+.stats p:last-of-type{
+    color: #cbd5e1;
+}
