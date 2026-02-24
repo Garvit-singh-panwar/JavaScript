@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import WindowSizeDisplay from './components/homework';
 
 function App() {
 
   const [text,setText] =  useState(' ');
   const [name, setName] = useState('Garvit');
+  // use Effect syntax:- useEffect(callback function, array of dependency); 
 
   //variation 1   it is called every when ui render 
   // useEffect(()=>{
@@ -64,6 +66,7 @@ function App() {
   return (
     <div className="App">
       <input type='text' onChange={changeHandler}></input>
+      <WindowSizeDisplay/>
     </div>
   );
 }

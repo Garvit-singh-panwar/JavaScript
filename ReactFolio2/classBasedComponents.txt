@@ -1,0 +1,9 @@
+Class Based components:
+=======================
+
+it has three most importand lifecycle methods 
+compoentsDidMount , -> after mounting component what action to perform come inside it 
+componentsWillUnMount ,-> after component will unmount what action to peroforn come inside it 
+ComponentsDidUpdate  , -> after component Uodate what action to perform comes inside it 
+
+but now we dont need this we do this using use Effect hook 
