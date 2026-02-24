@@ -1,3 +1,5 @@
+import APIKEY from "./key.js";
+
 // tab containers all {
 const tabContainer = document.querySelector('[tab_container]');
 const yourWeather = document.querySelector('[show_yourWeather]');
@@ -34,7 +36,6 @@ const userContainer = document.querySelector(`[Data_userInfo]`);
 // } 
 
 let currentTab = yourWeather;
-const APIKEY = `9a8ce430fc17755f1a4dbd741962b974`;
 currentTab.classList.add(`current-tab`);  
 
 
