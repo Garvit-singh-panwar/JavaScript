@@ -1,0 +1,86 @@
+Use Effect hook :   
+----------------        
+----------------
+                    it is used to manage all the side effects in our application
+
+1. What is a "Side Effect"?
+In React, a component has one main job: Render the UI.
+
+The Main Task: Taking data (props/state) and turning it into HTML/JSX.
+
+The Side Effect: Anything the component does besides rendering HTML. If the component reaches "outside" of itself to talk to the browser or a server, that is a side effect.
+----------------------------------------------------------------
+2. Common Examples
+Fetching Data: Asking an external API for information.
+
+Changing the Browser: Updating the document.title (the text on the tab).
+
+Timers: Setting up a setTimeout or setInterval.
+
+Event Listeners: Watching for a window resize or a scroll.
+
+---------------------------------------------------------------
+
+Think of a React component like a Chef in a kitchen.
+
+The Chef’s main job is to cook a meal and put it on a plate (this is Rendering the UI). Anything the Chef does other than cooking that specific plate is a Side Effect.
+
+👨‍🍳 Simple Definition
+A Side Effect is any "extra work" a component does that reaches outside of its own "kitchen" (the component itself).
+
+In React, we use the useEffect hook to handle these extra tasks safely so they don't get in the way of the cooking.
+
+🌍 Best Real-Life Examples
+1. The "Open/Close" Sign (Document Title)
+Imagine you are inside a shop. When you walk in, the shopkeeper flips the sign on the outside of the door to say "Open."
+
+The Component: The inside of the shop.
+
+The Side Effect: Changing the sign on the outside door.
+
+In React: Using useEffect to change the document.title (the text on the browser tab) when a user clicks a button.
+-------------------------------------------------------------------------------------------------
+2. The Delivery Order (API Call)
+You sit down at a restaurant. You look at the menu (UI). But the kitchen is out of fish! The waiter has to call the supplier to see if they can bring more.
+
+The Component: Your table and menu.
+
+The Side Effect: The phone call to the supplier (reaching out to an external server).
+
+In React: Using useEffect to fetch a list of products from a database as soon as the page loads.
+---------------------------------------------------------------------------------------------
+3. The Security Guard (Event Listeners)
+Imagine you hire a security guard to watch the front door. You tell him, "Tell me every time someone walks in."
+
+The Component: Your house.
+
+The Side Effect: The guard standing at the door watching the street.
+
+In React: Using useEffect to "listen" to the window resizing or the user scrolling.
+-------------------------------------------------------------------------------------------
+4. The Library Book (Cleanup)
+You go to a library and borrow a book. When you are done with the book, you must return it, or the library gets messy.
+
+The Component: You reading the book.
+
+The Side Effect: Borrowing the book from the shelf.
+
+The Cleanup: Returning the book when you leave.
+---------------------------------------------------------------------------------------------
+In React: If you start a timer or a music player in useEffect, you must "clear" or "stop" it when the component closes so it doesn't keep running in the background.
+
+💡 Why do we need useEffect? (The "Repeat" Problem)
+If a Chef had to call the supplier every single time he chopped a vegetable, he would never finish the meal.
+
+In React, components "re-render" (re-chop) constantly. If you don't use useEffect, your component will try to call the API or change the title every single second, which crashes the app.
+
+useEffect tells the Chef: "Finish the plate first, THEN make the phone call."
+
+Summary in 3 Bullets:
+Main Job: Showing stuff on the screen.
+
+Side Effect: Doing anything outside the screen (API, Title, Timers).
+
+useEffect: A "Scheduler" that makes sure these extra tasks happen at the right time.
+
+Would you like to see a very short "Hello World" code example of how to change the Browser Title using this hook?

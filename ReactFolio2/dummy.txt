@@ -1,0 +1,5 @@
+App :
+
+ [text , setText] = useState('')
+
+input -> onChange -> changehandler
