@@ -1,9 +1,8 @@
-import './Navbar.css';
 
 function Navbar(){
     return(
-        <nav>
-            <h1>Top Courses</h1>
+        <nav  className='bg-bgDark py-4'>
+            <h1 className='text-center text-3xl font-bold text-white'>Top Courses</h1>
         </nav>
     )
 }

@@ -1,29 +1,34 @@
-import './Cards.css';
+import { useState } from 'react';
 import Card from './Card';
 
 function Cards(props){
-    let data = props.courses; // Ensure you define where 'data' comes from
-    let category = props.category;
+  
+    const courses = props.courses;
+    const category = props.category;
 
-    function getCourses() {
-        if (category === "All") {
-            let allCourses = [];
-            Object.values(data).forEach(array => {
-                array.forEach(courseData => {
-                    allCourses.push(courseData);
-                });
+    const [likedCourses , setLikedCourses] = useState([]);
+
+    function filterCourses(){
+        let allCourses = [];
+        if(category === "All"){
+            Object.values(courses).forEach(Array => {
+                Array.forEach(element =>{
+                    allCourses.push(element);
+                })
             });
             return allCourses;
-        } else {
-            // Return the specific array for that category
-            return data[category];
+        }
+        else{
+            return courses[category];
         }
     }
 
     return(
-        <div>
-            {getCourses().map((obj)=>{
-                return(<Card {...obj}></Card>)
+        <div className="flex flex-wrap justify-center gap-4 mb-4">
+            {filterCourses().map(course =>{
+                return(
+                    <Card key={course.id} course={course}  likedCourses = {likedCourses}  setLikedCourses={ setLikedCourses} />
+                )
             })}
         </div>
     )
