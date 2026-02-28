@@ -1,0 +1,4 @@
+FOAM in react : 
+
+in html we cereate foam using foam tag 
+when i click on submit all the foam data should be accumalate (make object of data ( ekitha krna ) )  and then send in the api call
