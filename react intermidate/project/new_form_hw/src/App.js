@@ -16,13 +16,12 @@ function App() {
     zipCode: "",
     comments: false,
     candidates: false,
-    offers:false,
+    offers: false,
     notification: "",
 
 
   })
 
-  console.log(formData);
 
   return (
     <div className="App">

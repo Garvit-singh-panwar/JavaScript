@@ -2,27 +2,36 @@ import countryList from "../countryName";
 
 
 function Form(props){
-const formData = props.formData;
-const setFormData = props.setFormData;
+    const formData = props.formData;
+    const setFormData = props.setFormData;
 
 
 
-function changeHandler(event){
+    function changeHandler(event){
 
-    const {name , value , type , checked} = event.target; 
+        const {name , value , type , checked} = event.target; 
 
-    setFormData(prevData => {
-        return(
-            {
-                ...prevData ,
-                [name] : type === "checkbox" ? checked : value 
-            }
-        )
-    })
-}
+        setFormData(prevData => {
+            return(
+                {
+                    ...prevData ,
+                    [name] : type === "checkbox" ? checked : value 
+                }
+            )
+        })
+    }
+
+
+    function submitHandler(event){
+
+        event.preventDefault();
+
+        console.log(formData);
+    }
+
 
     return(
-        <form>
+        <form onSubmit={submitHandler}>
             <label htmlFor="firstname">First Name</label>
             <br/>
             <input 
@@ -56,6 +65,7 @@ function changeHandler(event){
             placeholder="Enter your email"
             name="email"
             id="email"
+            onChange={changeHandler}
             value={formData.email}
             /> 
 
@@ -127,7 +137,7 @@ function changeHandler(event){
             <br/>
             <br/>
 
-            <fieldset className="">
+            <fieldset className="checkbox-container">
                 <legend>By Email</legend>
 
                 <div className="box">
@@ -143,9 +153,9 @@ function changeHandler(event){
                             
                         <label htmlFor="comments">Comments</label>  
                         <br/>
-                        <span>
+                        <p>
                         Get notified when someones posts a comment on a post
-                        </span>
+                        </p>
 
                     </div>
 
@@ -165,9 +175,9 @@ function changeHandler(event){
                             
                         <label htmlFor="candidates">Candidates</label>  
                         <br/>
-                        <span>
+                        <p>
                         Get notified when a candidite apply for a job
-                        </span>
+                        </p>
 
                     </div>
 
@@ -179,18 +189,18 @@ function changeHandler(event){
                     
                     <input
                     type="checkbox"
-                    name="offer"
-                    id="offer"
+                    name="offers"
+                    id="offers"
                     onChange={changeHandler}
-                    checked={formData.offer}
+                    checked={formData.offers}
                     />
                     <div className="label">
                             
                         <label htmlFor="offer">offers</label>  
                         <br/>
-                        <span>
+                        <p>
                         Get notified when a candidite accepts or rejects an order
-                        </span>
+                        </p>
 
                     </div>
 
@@ -200,6 +210,30 @@ function changeHandler(event){
                 
 
             </fieldset>
+
+
+
+            <fieldset className="radio-container">
+                <legend>Push Notification</legend>
+                <p>this is delivered by message to your mobile phone</p>
+
+                <br/>
+                <input type="radio" onChange={changeHandler} value={"everything"} checked={formData.notification === "everything"} name="notification" id="everything" />
+                <label htmlFor="everything"> Everything</label>
+
+                <br/>
+                <input type="radio" onChange={changeHandler} value={"same as email"} checked={formData.notification === "same as email"} name="notification" id="same as email" />
+                <label htmlFor="same as email"> Same as Email</label>
+                
+                <br/>
+                <input type="radio" onChange={changeHandler} value={"no push notification"} checked={formData.notification === "no push notification"} name="notification" id="no push notification" />
+                <label htmlFor="no push notification"> No push notification</label>
+
+            </fieldset>
+
+            <br/>
+            <button type="submit" >Save </button>
+
         </form>
     )
 }
