@@ -1,0 +1,208 @@
+what is react router :- 
+
+React Router is a library that allows you to handle navigation in a React application without the browser refreshing the page. It makes your app feel like a multi-page website while technically remaining a Single Page Application (SPA).
+
+Key Concepts
+-> Single Page Application (SPA): Instead of loading a new digital file for every page, the browser loads one single HTML file. React then "swaps" components in and out depending on what you want to see.
+
+-> Dynamic Loading: When you click a link, React Router changes the URL in the address bar and tells React to render a different component. The page never actually reloads; only the data on the screen changes.
+
+-> The "Vibe": It provides a seamless, app-like experience where transitions between "pages" happen instantly.  
+
+to use react router we have to first install the package 
+command :-  npm install react-router-dom 
+
+
+then we have to go to index.js in src and    import {BrowserRouter} from 'react-router-dom';
+then wrap our app component in the BrowserRouter component 
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
+
+
+-> The Route (The Path): To reach any page (like Home, Labs, About, or Support), a specific path must exist. This path is called a Route.
+
+-> The Goal: We want to "teach" the browser this map. For example: "If you go to this path, you will find the Home page; if you go to that path, you will find the Support page," and so on.
+
+-> The Teacher (BrowserRouter): To teach the browser these routes, we use the <BrowserRouter> tag. It wraps the application and manages the communication between the URL in the browser and the components we want to show.
+
+
+1. Creating Routes in App.js
+    ->  To create multiple paths (routes) in our app, we use the Routes and Route components.
+
+    ->  <Routes>: This is a container that wraps all your individual routes.
+
+    ->  <Route>: This defines a single path. It needs two things: a path (the URL) and an element (the component to show).
+
+    ->  The Wildcard "*": If a user types a URL that doesn't exist, we use path="*" to catch that error and show a "Page Not Found" component.
+
+    ->  JavaScript
+    ->  import { Route, Routes } from 'react-router-dom';
+
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/support' element={<Support/>}/>
+            <Route path='/contact' element={<Contact/>}/>
+            {/* This catches any undefined URL */}
+            <Route path='*' element={<PageNotExist/>}/>
+        </Routes>
+
+
+2. Navigating with <Link>
+    -> In standard HTML, we use the <a> (anchor) tag, but that causes a full page refresh. In React, we use the <Link> component.
+
+    ->  It allows users to navigate just by clicking a button or text.
+
+    ->  It changes the URL without refreshing the browser, keeping the app fast.
+
+
+3. Enhancing Navigation with <NavLink>
+        Sometimes, we want the user to see which page they are currently on (e.g., the "Home" button turns bold when you are on the Home page).
+
+        NavLink works exactly like Link, but with a superpower: it knows when it is "active."
+
+        When a NavLink matches the current URL, it automatically adds an .active class to that element.
+
+        When you click a different link, it removes the class from the old one and adds it to the new one.
+
+        Example Navigation:
+
+        JavaScript
+        import { NavLink } from 'react-router-dom';
+
+        <nav>
+            <ul>
+            <li> <NavLink to="/"> Home </NavLink> </li>
+            <li> <NavLink to="/about"> About </NavLink> </li>
+            <li> <NavLink to="/contact"> Contact </NavLink> </li>
+            <li> <NavLink to="/support"> Support </NavLink> </li>
+            </ul>
+        </nav>
+        In your CSS (App.css):
+        You can now style that active state so the user has a visual cue:
+
+        CSS
+        .active {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+4. Nested Routing
+        Nested routing is when you have routes "inside" of other routes. This is very useful when you have a layout (like a Navbar or Header) that you want to show on every page.
+
+        1. The Problem with Parent Routes
+            When you put routes inside a parent route (like /), the browser will only show the parent element. It won't show the children because the parent hasn't been told where to display them.
+
+        2. The Solution: The <Outlet />
+            To make child routes visible, we must use the Outlet component inside the parent.
+
+            Think of it as a Placeholder: You are telling the parent, "Hey, if any of your children are active, display them right here!"
+
+            Permission: It gives the parent "permission" to render its children.
+
+            JavaScript
+            import { Outlet } from "react-router-dom";
+
+            function MainHeader() {
+                return (
+                    <div>
+                        {/* Your Navbar would usually go here */}
+                        <nav> ... </nav> 
+
+                        {/* This is where About, Support, etc. will appear */}
+                        <Outlet /> 
+                    </div>
+                );
+            }
+        3. The index Route
+            When you use a parent like MainHeader, and the user is just at the base path (/), the screen might be empty because no child is selected yet.
+
+            To fix this, we use the index attribute.
+
+            It tells React Router: "If the path is exactly the same as the parent's path, show this component by default."
+
+        4. Final Corrected Structure
+            JavaScript
+            import { Route, Routes } from 'react-router-dom';
+
+            <Routes>
+                {/* The Parent Route */}
+                <Route path='/' element={<MainHeader />}>  
+                    
+                    {/* The default page when path is "/" */}
+                    <Route index element={<Home />} /> 
+                    
+                    {/* Child Routes */}
+                    <Route path='/about' element={<About />} /> 
+                    <Route path='/support' element={<Support />} /> 
+                    <Route path='/contact' element={<Contact />} /> 
+                    
+                    {/* Catch-all for undefined paths */}
+                    <Route path='*' element={<PageNotExist />} /> 
+                </Route>
+            </Routes>
+
+5. useNavigate Hook 
+       1. What is the useNavigate Hook?
+        The useNavigate hook is a function provided by react-router-dom that allows you to move between pages using code. Instead of making the user click a link, your JavaScript logic decides when to change the route.
+        How to implement it:
+
+        Import: import { useNavigate } from "react-router-dom";
+
+
+        Initialize: const navigate = useNavigate(); (must be inside a component).
+
+
+        Execute: Maps("/your-path");
+
+        Example:
+        JavaScript
+        const navigate = useNavigate();
+        function goToAbout() {
+            navigate("/about");
+        }
+
+        2. Why use useNavigate instead of <Link>?
+        We already have <Link> and <NavLink> for clicking, but useNavigate is used for programmatic navigation—where the code takes control.
+        The Main Reasons:
+
+        Action-Based Redirection: When you want to change the page after a specific task is finished.
+
+
+        Example: After a user clicks "Submit" on a form, you check the data, and then move them to a "Thank You" or "Dashboard" page.
+
+
+        Logical Conditions:
+
+        When you only want to move the user if a condition is met.
+
+
+        Example: If isLoggedIn is true, go to /profile. If false, stay on /login and show an error.
+
+
+        Browser History (Back/Forward):
+
+        useNavigate can go back to the previous page without knowing the exact URL.
+
+
+        Example: Maps(-1) works exactly like the browser's Back button.
+
+
+        Timers & Delays:
+
+        If you want to move the user automatically after 5 seconds (like a "Success" message that disappears).
+
+
+        Comparison Summary
+        Feature	<Link> / <NavLink>	useNavigate
+        Type	A UI Component (Tag).	A Hook (Function).
+        Trigger	User clicks the link.	Code logic triggers it.
+        Where it lives	In your HTML/JSX.	Inside your JS functions.
+        Best For	Navbars and Menus.	Login, Form Submission, Back buttons.
+
+        Simplified Note for your Registry:
+        "Use Links for paths the user chooses to click on. Use useNavigate for paths the application chooses to take based on logic, like redirecting after a successful form submission or going back one page in history."
+
+

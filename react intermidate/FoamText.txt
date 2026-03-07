@@ -1,4 +1,14 @@
 FOAM in react : 
 
-in html we cereate foam using foam tag 
+in HTML we create foam using foam tag 
 when i click on submit all the foam data should be accumalate (make object of data ( ekitha krna ) )  and then send in the api call
+
+
+in React we have the functionality to save state  saving the old state and update the state so when we click on submit button there is no need to accumalate(किसी वस्तु को अच्छी मात्रा या संख्या में इकट्ठा कर लेना) data the data is already present we click on submit button and send directly 
+
+
+
+
+
+
+
