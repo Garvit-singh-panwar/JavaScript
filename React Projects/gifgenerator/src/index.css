@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.mainbg{
+    background-image: url("./assets/backgroundFilter.jpg");
+    background-size: contain;
+}
