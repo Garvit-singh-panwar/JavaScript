@@ -15,11 +15,12 @@ const Card = ({title,author , category,date,content ,tags}) => {
         </p>
         <div>
             {
-                tags.map((tag)=>{
+                tags.map((tag , index)=>{
                     return( 
-                        <>
-                            <span className='underline text-[#117] cursor-pointer'>{` #${tag} `}</span>  &nbsp; &nbsp;
-                        </>
+                        <React.Fragment key={index}> 
+                            <span className='underline text-[#117] cursor-pointer'>{` #${tag} `}</span>
+                            &nbsp; &nbsp;
+                        </React.Fragment>
                     )
                 })
             }

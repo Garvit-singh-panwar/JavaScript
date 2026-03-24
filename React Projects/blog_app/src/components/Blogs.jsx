@@ -8,7 +8,7 @@ const Blogs = () => {
 
     const {loading, posts } = useContext(AppContext);
   return (
-    <div className='w-[100%] flex items-center flex-wrap h-[100vh] '>
+    <div className='w-[100%] flex items-center flex-wrap h-[100%] min-h-[80vh] '>
 
     {loading ? <Loader/> : <>
         { posts.length === 0 ? 
