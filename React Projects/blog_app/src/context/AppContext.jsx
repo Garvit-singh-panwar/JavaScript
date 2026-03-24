@@ -10,6 +10,7 @@ export default function AppContextProvider({ children }) {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(null);
 
+    
     async function fetchBlogPosts(pageNumber = 1) {
         setLoading(true);
         // Using template literals to handle pagination in the URL
@@ -23,7 +24,9 @@ export default function AppContextProvider({ children }) {
                     }
                 }
             );
-            const data = result.data; // Added await here!
+            const data = result.data; 
+
+            console.log(data);
 
             if (!data.posts) throw new Error("No posts found");
 

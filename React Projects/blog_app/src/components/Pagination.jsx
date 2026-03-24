@@ -2,9 +2,9 @@ import React from 'react'
 
 const Pagination = () => {
   return (
-    <div>
-      
-    </div>
+    <footer>
+      hey I am footer
+    </footer>
   )
 }
 
