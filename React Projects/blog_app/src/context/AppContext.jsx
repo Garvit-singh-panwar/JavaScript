@@ -26,8 +26,6 @@ export default function AppContextProvider({ children }) {
             );
             const data = result.data; 
 
-            console.log(data);
-
             if (!data.posts) throw new Error("No posts found");
 
             setPage(data.page);

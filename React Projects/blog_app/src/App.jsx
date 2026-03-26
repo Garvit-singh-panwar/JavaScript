@@ -1,26 +1,16 @@
 import './App.css'
 import Header from './components/Header';
-import Blogs from './components/Blogs';
 import Pagination from './components/Pagination';
-import { AppContext } from './context/AppContext';
-import { useContext, useEffect } from 'react';
+import {Outlet} from 'react-router-dom'
 
 function App() {
 
-  const {fetchBlogPosts} = useContext(AppContext);
-
-  useEffect(
-    ()=>{
-      fetchBlogPosts();
-    },
-    []
-  )
   return (
-    <>
+    <div className='relative w-full h-full '>
       <Header/>
-      <Blogs/>
+      <Outlet />
       <Pagination/>
-    </>
+    </div>
   )
 }
 

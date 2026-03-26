@@ -1,14 +1,16 @@
-import React from 'react'
-import { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
 import Loader from './Loader';
+import { useRouteLoaderData , useNavigation } from 'react-router-dom';
 import Card from './Card';
 
 const Blogs = () => {
 
-    const {loading, posts } = useContext(AppContext);
+  const data = useRouteLoaderData("blog-data");
+  const {posts} = data;
+  const navigation = useNavigation();
+  const loading = navigation.state === "loading" && !navigation.formData  ;
+
   return (
-    <div className='w-[100%] flex items-center flex-wrap h-[100%] min-h-[80vh] '>
+    <div className='w-[100%] bg-[#fff] flex items-center flex-wrap h-[100%] min-h-[80vh] '>
 
     {loading ? <Loader/> : <>
         { posts.length === 0 ? 

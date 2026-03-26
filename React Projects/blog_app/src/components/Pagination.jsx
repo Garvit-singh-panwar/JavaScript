@@ -1,25 +1,38 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../context/AppContext';
-
+import { useNavigate , useNavigation , useRouteLoaderData} from "react-router-dom";
 const Pagination = () => {
-  const {page,totalPages,fetchBlogPosts,loading} = useContext(AppContext);
 
-const nextHandler = () => {
-    if (page < totalPages) {
-      fetchBlogPosts(page + 1);
+  const navigate = useNavigate();
+  const navigation = useNavigation();
+  const loading = navigation.state === "loading";
+  const data = useRouteLoaderData("blog-data"); 
+  
+  if (!data) return null;
+
+  const { page, totalPages } = data;
+
+  const handlePageChange = (newPage) => {
+      // This triggers the loader automatically by changing the URL
+      navigate(`/?page=${newPage}`);
+      
+      // Optional: Scroll to top when page changes
+  };
+
+  const nextHandler = () => {
+    if (page < totalPages) { 
+     handlePageChange(page + 1);
     }
   }
 
   const prevHandler = () => {
     if (page > 1) {
-      fetchBlogPosts(page - 1);
+      handlePageChange(page - 1);
     }
   }
 
 
   return (
     
-        <footer className='flex w-[90%] mx-auto justify-between py-7 px-6' >
+        <footer className='sticky bottom-0 flex w-[100%] mx-auto justify-between py-3 px-6  bg-[#333] text-[#fff] items-center' >
           
           <div className='flex gap-20'>   
           <button 
@@ -39,7 +52,7 @@ const nextHandler = () => {
           </div>
 
 
-          <p className='text-[1rem] text-[#000] font-bold'>Page no <span className='text-[#4a4]'>{page}</span> out of <span className='text-[#4a4]'>{ totalPages }</span></p>
+          <p className='text-[1rem] text-[#fff] font-bold'>Page no <span className='text-[#4a4]'>{page}</span> out of <span className='text-[#4a4]'>{ totalPages }</span></p>
 
 
           
