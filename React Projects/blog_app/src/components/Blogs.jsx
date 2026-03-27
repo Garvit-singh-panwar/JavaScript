@@ -1,10 +1,15 @@
 import Loader from './Loader';
-import { useRouteLoaderData , useNavigation } from 'react-router-dom';
+import { useRouteLoaderData , useNavigation ,useMatches } from 'react-router-dom';
 import Card from './Card';
 
 const Blogs = () => {
 
-  const data = useRouteLoaderData("blog-data");
+
+  const matches = useMatches();
+  const currentRouteData = matches[matches.length-1];
+  const ActiveRouteId = currentRouteData?.id;
+
+  const data = useRouteLoaderData(ActiveRouteId);
   const {posts} = data;
   const navigation = useNavigation();
   const loading = navigation.state === "loading" && !navigation.formData  ;

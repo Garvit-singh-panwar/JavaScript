@@ -1,10 +1,15 @@
-import { useNavigate , useNavigation , useRouteLoaderData} from "react-router-dom";
+import { useNavigate , useNavigation , useRouteLoaderData , useMatches} from "react-router-dom";
 const Pagination = () => {
 
+ 
   const navigate = useNavigate();
   const navigation = useNavigation();
   const loading = navigation.state === "loading";
-  const data = useRouteLoaderData("blog-data"); 
+
+  const matches = useMatches();
+  const currentRouteInfo = matches[matches.length-1];
+  const currentRouteId = currentRouteInfo?.id;
+  const data = useRouteLoaderData(currentRouteId); 
   
   if (!data) return null;
 

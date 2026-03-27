@@ -8,6 +8,9 @@
   import { blogLoader } from './loader/blogLoader.js';
   import Loader from './components/Loader.jsx';
 import Home from './Pages/Home.jsx';
+import TagsPage from './Pages/TagsPage.jsx';
+import CategoryPage from './Pages/CategoryPage.jsx';
+import BlogsPage, { fetchRelatedBlogs } from './Pages/BlogsPage.jsx';
 
   let router = createBrowserRouter([
     {
@@ -19,8 +22,26 @@ import Home from './Pages/Home.jsx';
           index: true,
           element: <Home/>,
           loader: blogLoader,
-          id: "blog-data",
+          id: "home-data",
         },
+        {
+          path: '/tags/:tag',
+          Component: TagsPage,
+          loader: blogLoader,
+          id: "tag-data"
+        },
+        {
+          path: '/categories/:category',
+          Component: CategoryPage,
+          loader: blogLoader,
+          id: "category-data"
+        },
+        {
+          path: '/blogs/:blog_id',
+          Component: BlogsPage,
+          loader: fetchRelatedBlogs,
+          id: "blog-data"
+        }
       ]
     },
   ]);
