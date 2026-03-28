@@ -11,10 +11,10 @@ export const blogLoader = async ({params, request }) => {
         let queryParams = { page: page};
 
         if(params.tag){
-            queryParams.tag = params.tag;
+            queryParams.tag = params.tag.replaceAll("-"," ");
         }
         else if(params.category){
-            queryParams.category = params.category;
+            queryParams.category = params.category.replaceAll("-"," ");
         }
 
         const response = await axios.get(baseUrl, { params: queryParams });
