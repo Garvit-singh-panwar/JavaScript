@@ -1,0 +1,70 @@
+BackEnd :-
+
+What is BackEnd :- 
+let a in webdevelopment  we have one entity we named FrontEnd ,another called BackEnd
+the UI works comes in frontEnd or the look or feel we call frontEnd
+and The internal processing like how to interact with database what is the business logic that all logic , all brain defines in backend 
+User always interact with frontend and frontend linked with backend 
+
+for ex i am using  facebook so i am only interacting with the frontEnd like clicking button opening a tab i am only interacting with  FrontEnd but my FrontEnd is interacting with the BackEnd like give access of this Api , call this Api , give that data from  the database , update this data on database , fill this data on database
+
+All the functioning , the brain , bheaviour comes in BackEnd
+
+let say a have a app facebook masanger and there is a link let say its a 20% discount link of any product when you click on this link what happens by you by click this link there goes a http request (what is http its a type of protocol the full form of it is (hyper text transfer protocall ) whats its need we learn the clint server model whats it clint request one thing from server server then did all the computation ,put login ,did database interaction then give response to the clint in this clint server intetraction we need http  ) in a abstract way i can say that it can redirect me to a website a website will render in my browser the browser get that link the browser dont need those words browser need the IP address if you give IP address to the prowser it will give you the data how to convert that in ip address there is a process called domain name resolution by which we get IP address now we have Ip address this Ip address is of a website or a server this website is hosted on a computer this computer we call it server this ip address is used to identify that server or computer just for ex now you get the ip address of that server now you know your source and who is my server , server port number what we do now we stablish a connection we can do it using TCP after that my get request is ready what is get request when we do a http call we have majorly 4 types of request post get put delete we are talking about clint server model here our reuest goes what is get request it retrive some data or fetch some data put is used to update some data post is used to create or submit new data or delete is used to remove some data 
+
+---
+
+## 1. The Big Picture: FrontEnd vs. BackEnd
+Think of a restaurant. 
+* **FrontEnd (The Dining Room):** The decor, the menu, and the tables. It’s what you see and interact with.
+* **BackEnd (The Kitchen):** Where the cooking happens, the ingredients are stored, and the recipes (logic) are followed. You don’t see it, but without it, you don’t get your meal.
+
+
+
+---
+
+## 2. The Client-Server Model
+In web development, we use a communication system called the **Client-Server Model**.
+* **The Client:** Your device (phone or laptop) running a browser or an app.
+* **The Server:** A powerful computer somewhere else that "serves" the data you need.
+
+### How they talk: HTTP
+To communicate, they use a language (protocol) called **HTTP** (HyperText Transfer Protocol). 
+* The Client sends a **Request**.
+* The Server sends a **Response**.
+
+---
+
+## 3. The Journey of a Click (Example: 20% Discount Link)
+When you click a link in Facebook Messenger, a complex "handshake" happens behind the scenes:
+
+1.  **DNS Resolution:** Your browser doesn't understand "facebook.com." It needs an **IP Address** (like a phone number for computers, e.g., `192.168.1.1`). It uses a "phonebook" called **DNS** to find that IP.
+2.  **Establishing a Connection:** Once the browser has the IP, it uses **TCP** (Transmission Control Protocol) to make sure a stable connection is "plugged in" between you and the server.
+3.  **Sending the Request:** Your browser sends an HTTP request to the server's **Port Number** (a specific "door" on the server designated for web traffic).
+
+
+
+---
+
+## 4. The "Verbs" of the BackEnd (HTTP Methods)
+The BackEnd doesn't just give you data; it performs specific actions based on the "verb" you send:
+
+| Method            | Action            | Example Scenario                                  |
+| :---              | :---              | :---                                              |
+| **GET**           | **Retrieve**      | Clicking the link to *view* the discount page.    |
+| **POST**          | **Create**        | Filling out a form to *sign up* for the discount. |
+| **PUT**           | **Update**        | Changing your profile email address.              |
+| **DELETE**        | **Remove**        | Deleting a saved coupon from your account.        |
+
+---
+
+## 5. What the BackEnd Actually Does
+Once the request hits the server, the BackEnd "Brain" takes over:
+* **Business Logic:** It checks if the discount is still valid.
+* **Database Interaction:** It looks up your user ID to see if you’ve used the code before.
+* **API Calls:** It might talk to another service (like a payment processor) to verify the price.
+* **Final Response:** It sends back the HTML/CSS/Data so the FrontEnd can show you the "Success!" page.
+
+---
+
+**Would you like me to dive deeper into how Databases store this information, or should we look at the specific languages (like Node.js or Python) used to write this logic?**

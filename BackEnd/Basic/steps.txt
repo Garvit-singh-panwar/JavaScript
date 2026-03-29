@@ -1,0 +1,25 @@
+step 1 : create a folder in terminal type command mkdir folder_name
+step 2 : move into the folder in terminal type command cd folder_name
+step 3 : npm init -y
+step 4 : npm i express 
+step 5 : create server.js 
+
+
+
+
+
+
+
+
+notes: - 
+we want to make our server live 
+step 1 create your own server :-  so i pull express                             const express = require(express); 
+i am creating a server using express so i extensiate the express                const App = express()
+this two lines used to create the server 
+
+now server is not live because we havent define the code but we created it 
+step 2: now define where our server listen in which port number                 App.listen(postnumber , ()=>{
+                                                                                   console.log("server is listening at port postnumber)     
+                                                                                })
+here we defined two arguments 1 st port no where the server listens and 2nd we define the bheaviour after listening to this server what is the bheaviour of this server here the bheaviour is we print server started 
+
