@@ -1,0 +1,97 @@
+when ever terminal word comes here comes many terms which we use interchangably  fox ex some one is saying shell , other is commandline , console 
+
+Command line : any interface that is used by entering textual command (generally windows centeric ).
+Terminal : this is a type of command line (generally mac centeric).
+console: A command line interface used to work with your  computer .
+
+shell :  A program running on computer.
+
+Bash : A popular shell on Mac OSI Linux .
+Z-shell: Another Shell ( default ).
+
+
+----------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx--------------------------------------
+
+
+🖥️ Command Line Basics (Quick Notes)
+
+🔹 Command Line (CLI)
+Definition:
+A way to control the computer by typing text commands instead of using a mouse.
+Example:
+cd Documents
+👉 This command moves you into the “Documents” folder.
+🧠 Remember:
+CLI = typing to control computer
+
+🔹 Terminal
+Definition:
+An application (window) where you type commands.
+Examples:
+
+Mac/Linux → Terminal
+
+
+Windows → Command Prompt / PowerShell
+
+🧠 Remember:
+Terminal = place where you type
+
+🔹 Console
+Definition:
+Almost same as terminal; a screen used to interact with the computer using commands.
+Example:
+Opening Command Prompt in Windows is using a console.
+🧠 Remember:
+Console = another word for terminal (mostly)
+
+🔹 Shell
+Definition:
+A program that reads your commands and tells the operating system what to do.
+Example:
+ls
+👉 You type this → shell understands → shows list of files
+🧠 Remember:
+Shell = command interpreter (translator)
+
+🔹 Bash (Bourne Again Shell)
+Definition:
+A popular shell used in Linux and older macOS.
+Example:
+echo Hello
+👉 Output: Hello
+🧠 Remember:
+Bash = common shell
+
+🔹 Zsh (Z Shell)
+Definition:
+A modern shell (default in newer macOS).
+Example:
+echo Hi
+👉 Works like Bash but with better features (auto-suggestions, themes)
+🧠 Remember:
+Zsh = improved shell
+
+🔁 Full Flow Example (Important ⭐)
+When you type:
+ls
+👉 What happens:
+
+You type in Terminal
+
+Shell (Bash/Zsh) reads the command
+
+Shell tells OS: “show files”
+
+Output appears on screen
+
+
+🎯 Final Memory Trick
+Terminal → where you type
+
+Shell → who understands
+
+Command Line → how you interact
+
+👉 Think:
+“Type (Terminal) → Translate (Shell) → Result (Output)”

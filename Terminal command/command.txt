@@ -1,0 +1,55 @@
+ls :-list files (show all files)  
+
+pwd :- print working directory(folder)  (Where I am)    
+
+clear :- clear screen
+
+Navigation command:- Go inside or outside directory
+
+cd (changeDirectory) using cd command we can go inside the child folder of the parent folder where we are in 
+
+command :- cd folderName 
+
+cd .. comae out to the previous folder  
+
+Paths :- Absolute / relative 
+
+cd desktop/garvitfolder     (relative Path)  relative path is relative to our current location  relative path always starts with a name 
+
+cd Users/seemaPanwar/desktop (absolute path ) absolute path can not be depend on our current directory  absolute path always starts with a /  
+
+/ = root directory computer root directory is symbolized by /
+~ = home directory conputer profile directory is symbolized by ~ 
+
+Making directory 
+
+mkdir foldername :-  command  used to make folder  in your current location we can not make 2 or more samenamed folder in single location using this command 
+
+Flags 
+
+flags that we can pass  with command to modify there behaviour 
+
+manual command
+man ls - give info about Is command 
+man mkdir - give info about mkdir command 
+
+with Flags
+
+ls -/
+ls -a  they give additional information with the command like it gives firectory entries whose name begin with a . which can not be seen normally   
+ls -l gives us some additional info with it 
+ls -/a
+
+to combine flages we write - then name of the flages like ls -la   here we combined 2 flags -l and -a
+
+Touch command used to create files 
+
+touch   index.js  create index.js in your current directory
+touch   app.js create app.js in your current directory 
+
+Delete files and folder 
+this command is very sensetive we can not restore file which is deleted by this command
+
+rm is used to delete files 
+rmdir is used to delete folders 
+rm -rf remove any folder

@@ -1,0 +1,115 @@
+What is Terminal ?
+terminal is a text based input and output environment 
+like commandline , powershell 
+
+for ex we can do many thing in our computer ex opening || creating || deleting folder , creating files || deleting files 
+
+we can do this by just typing some commands in our terminal 
+
+for this type of basic things we learn terminal 
+this makes devlopment fast 
+
+it is used to install npm package , git commands run thhrough terminal , this make programing easy 
+manny hidden files can not be seen by normal user to access those hidden files we use terminal  we get access for our computer internals 
+
+we get access of many parts of our operating system  
+
+using terminal we get access of many parts of the computer which as a normal user we cant get 
+
+
+----------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx--------------------------------------
+
+the terminal is about speed, efficiency, and getting "under the hood" of your computer.
+
+Think of the GUI (Graphical User Interface) like a restaurant menu where you can only pick what’s listed. The Terminal is like being the chef in the kitchen—you can combine any ingredients you want to make exactly what you need.
+Here are your notes refined into simpler, more professional terms.
+
+🖥️ What is the Terminal?
+The Terminal (also called the Command Line Interface or CLI) is a text-based program used to talk directly to your computer's operating system. Instead of clicking icons, you type specific instructions.
+🚀 Why Developers Use It
+
+Speed: Experienced users can move files, create folders, and search through data much faster with typing than with a mouse.
+
+Automation: You can write a single line of code to perform a task 1,000 times (like renaming 1,000 photos at once).
+
+Access: It allows you to see "hidden" system files and settings that the regular interface hides to keep average users from accidentally breaking things.
+
+Tools: Most professional tools (like Git for version control or NPM for JavaScript packages) are designed to be run through the terminal.
+
+
+📁 Common Examples
+Here is how "Normal" actions compare to "Terminal" actions: 
+Task	                    Manual Way (GUI)	                                    Terminal Way (CLI)
+Create a Folder	            Right-click → New Folder → Type Name	                mkdir my-project
+List Files	                Open folder in File Explorer / Finder	                ls (Mac/Linux) or dir (Windows)
+Delete a File	            Right-click → Move to Trash → Empty Trash	            rm file.txt
+Install Software	        Search website → Download .exe → Run Installer	        npm install bootstrap
+
+🔍 A Quick Correction
+You mentioned that the terminal gives you access that a "normal user" can't get. To be precise:
+The terminal doesn't automatically give you "secret" powers, but it makes it much easier to use Administrative (Root) privileges.
+On Mac/Linux, you use the command sudo (SuperUser Do), and on Windows, you run the terminal "As Administrator." This tells the computer, "I know what I'm doing, let me edit the core system files."
+
+----------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx--------------------------------------
+
+
+🖥️ What is Terminal?
+Definition:
+Terminal is a text-based tool where you type commands and the computer gives output.
+👉 It is like:
+
+Command Prompt
+
+PowerShell
+
+💡 What can we do with Terminal?
+We can control our computer by typing commands instead of clicking.
+🔹 Examples:
+
+Open folders
+
+Create folders
+
+Delete folders
+
+Create files
+
+Delete files
+
+👉 Example:
+mkdir test
+Creates a new folder named test
+
+⚡ Why do we use Terminal?
+
+It makes work faster
+
+You can do many things with just typing
+
+Developers use it a lot
+
+🧑‍💻 Where is Terminal used?
+
+Install packages (like npm)
+
+Run Git commands
+
+Run programs
+
+👉 Example:
+npm install express
+
+🔍 Extra Power of Terminal
+
+You can see hidden files
+
+You can access deeper parts of your computer
+
+You get more control than normal users
+
+🎯 Simple Meaning
+👉 Terminal = a place where you type commands to control your computer
+
+🧠 Easy Memory Trick
+👉 Clicking = normal way
+👉 Typing (Terminal) = faster + more powerful way
