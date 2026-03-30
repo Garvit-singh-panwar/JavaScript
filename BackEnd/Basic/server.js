@@ -1,30 +1,34 @@
 
-// server initiate
-const express = require("express");
-const App = express();
+// server Instantiate
+import express from "express";
+import mongoose from "mongoose";
 
-// USED TO parse request.body in express generally in post and put 
-const bodyParser = require('body-parser');
-
-App.use(bodyParser.json());
+const app = express(); 
 
 
-// activate the server on 3000 port 
+// specially parse json data & add it to the request.body object
+app.use(express.json());
+
+// activate the server on port 3000 
 const port = 3000;
-App.listen(port , ()=>{
-    console.log("server started");
+app.listen(port , ()=>{
+    console.log("server started"); //
 })
 
 
-// 
-App.get('/' , (request,response)=>{
+//Routes
+app.get('/' , (request,response)=>{
     response.send("hello ji , kaise ho saare");
 } )
 
-App.post('/api/cars' , (request,response)=>{
+app.post('/api/cars' , (request,response)=>{
    const {name,brand} =  request.body;
    console.log(name);
    console.log(brand);
    response.send("car submited sucessfully.");
-})
+});
 
+
+mongoose.connect("mongodb://127.0.0.1:27017/whatsapp" )
+.then(()=>{console.log("connection sucessfull")})
+.catch((error)=>{console.log("recived an error",error)});
