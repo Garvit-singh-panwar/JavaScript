@@ -1,0 +1,518 @@
+We can use Git in many ways.
+
+First way is using the command line (terminal).
+
+We can check this by going to the terminal and typing:
+
+git --version
+
+If we type:
+
+git
+
+we can see all the commands of Git.
+
+2nd way is using our IDE/code editor.
+
+There are many extensions, and by using those extensions we can use Git easily without typing many commands.
+
+3rd way is using a graphical user interface like GitKraken.
+
+In this, we can use Git with a visual interface instead of commands.
+
+🔹 Configuring Git
+
+If we are using Git, it has to know with which name and email ID we are making changes.
+
+To configure, we use these two commands:
+
+git config --global user.name "MyName"
+
+→ Here we define the username we are using to make changes
+
+git config --global user.email "anyEmail@email.com"
+
+→ Here we define the email we are using
+
+Here we have two options:
+
+--local → used only for this project
+--global → used for every repository
+
+👉 Configure means we are storing our details in Git.
+
+🔹 Basic Commands (Syntax)
+Clone
+
+Clone means copying a repository to our local machine.
+
+git clone <some-link>
+Status
+
+Status shows the current state of our code.
+
+git status
+
+When we change anything in our repository, the status of our code changes.
+
+🔹 Example to Understand
+
+For example, we have a letter.
+
+When we write something on it, then pack it and put a stamp on it, it becomes a proper stamped letter.
+So its status changes, and then we post it.
+
+In the same way, files in our repository also have a lifecycle.
+
+🔹 File Lifecycle in Git
+
+Initially, a file is untracked, which means Git does not know about this file or what is inside it.
+
+The work of Git is to track changes and store history.
+But untracked files are not tracked by Git, so if we make changes in them, Git does not store those changes anywhere.
+
+If we want Git to track those files, we need to add them.
+
+After adding, Git starts tracking them, and they move to the staging area (they are now staged, not unmodified yet).
+
+When we make changes in a tracked file, it becomes modified.
+
+Unmodified is the normal state of a file after committing.
+
+Let’s say we have an old file which is already tracked by Git, and we create a new file which is untracked.
+To make the new file tracked, we add it. Now Git starts tracking it.
+
+After adding, files are in the staged state.
+After committing, they become unmodified.
+
+If we make changes again, they become modified.
+
+🔹 Two-Step Process to Finalize Changes
+
+Now comes the two-step process to finalize the changes:
+
+First, we stage the file
+Second, we commit the file
+
+After commit, the file becomes unmodified again.
+
+🔹 Basic Commands
+Add
+
+Add is used to add new or changed files in your working directory to the Git staging area.
+
+git add <fileName>
+
+If we want to add every file in our repo, we can use:
+
+git add .
+Commit
+
+Commit is the record of changes.
+
+git commit -m "message"
+
+👉 The message in the commit should be meaningful.
+
+Push
+
+Push moves the changes from your local device to a remote repository like GitHub.
+
+git push origin branchName
+🔹 Initialize Repository
+
+Init command is used to make your local folder a repository.
+
+git init
+🔹 Connecting Local Repo to GitHub
+
+To push local repository code to GitHub, we first create a repository on GitHub.
+
+Then in our local repository (where we used git init), we open the terminal and run:
+
+git remote add origin <the github repo link>
+
+👉 This links the local system repository with the GitHub repository.
+👉 After this, we can perform push and pull operations.
+
+To verify this, we can run:
+
+git remote -v
+🔹 Branch
+git branch
+
+👉 It tells about our current branch.
+
+When we work in a group, all developers take code from the main branch, make changes in their own branch, and push to their branch so that the main application does not get disturbed.
+
+After successfully checking everything, the changes are merged into the main branch (usually using pull request).
+
+Rename branch
+git branch -M main
+
+👉 It is used to rename the current branch to main.
+
+Push to main branch
+git push origin main
+Set upstream
+git push -u origin main
+
+👉 After this command, you don’t have to write origin main every time.
+👉 You can just use:
+
+git push
+Commit shortcut
+git commit -am "message"
+
+👉 This command adds and commits together
+👉 But it works only for already tracked files (not new files)
+
+🔹 Branch Operations
+Switch branch
+git checkout <branch name>
+
+👉 Used to navigate to another branch
+
+Create new branch
+git checkout -b <new branch name>
+
+👉 Used to create a new branch
+
+Delete branch
+git branch -d <branch name>
+🔹 Compare and Merge
+Compare branches
+git diff <branch name>
+
+👉 Used to compare changes between branches
+
+Merge branches
+git merge <branch name>
+
+👉 Used to merge one branch into another
+
+👉 We can also use Pull Request on GitHub for merging, where we add a message or description.
+
+🔹 Pull Changes
+
+If we make changes on GitHub and those changes are not present in our local repository, we need to update our local repo.
+
+git pull origin main
+
+👉 It is used to fetch and download content from a remote repository and update the local repository.
+
+🔹 Merge Conflicts
+
+Conflicts come while merging when we change the same line of code in different branches.
+
+Git cannot decide which change to keep.
+
+So we resolve the conflict manually by:
+
+Removing unwanted code
+Keeping correct code
+
+Then:
+
+git add .
+git commit -m "conflict resolved"
+🔹 How to Fix Mistakes
+Undo staged changes
+
+If we accidentally add files that we don’t want:
+
+git reset <fileName>
+
+or
+
+git reset
+
+👉 This removes files from staging area but does not delete changes.
+
+Undo last commit
+git reset HEAD~1
+
+👉 HEAD is like a pointer to the last commit
+👉 This moves one step back but keeps your changes
+
+Undo multiple commits
+git log
+
+👉 Shows all commits with their commit hash
+
+Then:
+
+git reset <commit hash>
+
+👉 Commit hash is a unique ID for each commit
+
+Hard reset (Danger ⚠️)
+git reset --hard <commit hash>
+
+👉 This removes commits and changes permanently
+
+🔹 Forking
+
+Forking means copying someone else’s repository to your GitHub account.
+
+Example:
+If you want to contribute to a project but don’t have direct access, you can fork it.
+
+Then:
+
+Make changes (like adding a feature)
+Push changes to your fork
+
+After that, create a Pull Request to the original repository.
+
+👉 The owner will review your changes and decide whether to accept them.
+
+👉 This is how you can contribute to other repositories.
+---------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx----------------------------------
+
+📘 Git Explained in Simple Words (Easy Revision Notes)
+🔹 What is Git?
+
+Git is a tool that helps you track changes in your code.
+
+Think of it like:
+👉 A history notebook for your project
+👉 It remembers:
+
+What you changed
+When you changed it
+Who changed it
+
+So if something goes wrong, you can go back to an older version.
+
+🔹 Ways to Use Git
+
+There are 3 common ways:
+
+1. Terminal (Command Line)
+
+You type commands like:
+
+git status
+git add .
+
+👉 This is the most powerful way.
+
+2. Code Editor (VS Code, etc.)
+You click buttons instead of typing commands
+Easier for beginners
+3. GUI Tools (like GitKraken)
+Full visual interface
+You see branches, commits like a diagram
+🔹 First Step: Configure Git
+
+Git needs to know who you are, so it can attach your name to changes.
+
+git config --global user.name "YourName"
+git config --global user.email "your@email.com"
+
+👉 This means:
+
+Every change you make will have your name
+Types:
+--global → applies everywhere
+--local → only this project
+🔹 Understanding Git with a Simple Example
+
+Imagine writing a letter:
+
+You write something → (change)
+You put it in an envelope → (staging)
+You send it → (commit)
+
+Git works exactly like this.
+
+🔹 File Lifecycle in Git (Very Important)
+
+Every file goes through different stages:
+
+1. Untracked
+
+👉 Git does NOT know this file exists
+Example: You created a new file
+
+2. Tracked
+
+👉 Git now knows about the file
+
+This happens after:
+
+git add fileName
+3. Modified
+
+👉 You changed something in the file
+
+4. Staged
+
+👉 You are preparing it to save
+
+5. Committed
+
+👉 Changes are permanently saved in Git history
+
+🔹 Basic Workflow (Most Important Part)
+
+Whenever you work, you follow this:
+
+git add .
+git commit -m "message"
+git push
+
+👉 In simple words:
+
+Add → tell Git what to track
+Commit → save changes
+Push → send to GitHub
+🔹 Important Commands Explained Clearly
+🔸 Clone (Download a Project)
+git clone <repo-link>
+
+👉 Copies project from GitHub to your computer
+
+🔸 Status (Check What’s Happening)
+git status
+
+👉 Shows:
+
+Which files changed
+Which are staged
+🔸 Add (Prepare Files)
+git add fileName
+git add .
+
+👉 git add . → adds everything
+
+🔸 Commit (Save Changes)
+git commit -m "message"
+
+👉 Message should explain what you did
+Example:
+
+"Added login page"
+"Fixed bug in navbar"
+🔸 Push (Upload to GitHub)
+git push origin main
+
+👉 Sends your work to GitHub
+
+🔹 Start Your Own Project
+git init
+
+👉 Turns your folder into a Git repository
+
+🔹 Connect to GitHub
+git remote add origin <repo-link>
+
+👉 This connects:
+
+Your computer ↔ GitHub repo
+
+Check connection:
+
+git remote -v
+🔹 Branching (Working Safely)
+
+Branches help you work without breaking the main code
+
+Why use branches?
+
+👉 So your main project stays safe
+
+Commands:
+
+Check branch:
+
+git branch
+
+Create new branch:
+
+git checkout -b newBranch
+
+Switch branch:
+
+git checkout branchName
+
+Delete branch:
+
+git branch -d branchName
+🔹 Merge (Combine Work)
+git merge branchName
+
+👉 Combines another branch into current branch
+
+🔹 Pull (Get Latest Code)
+git pull origin main
+
+👉 Downloads latest changes from GitHub
+
+🔹 Merge Conflicts (Simple Explanation)
+
+Conflict happens when:
+👉 Two people edit the SAME line
+
+Git gets confused:
+👉 “Which change should I keep?”
+
+How to fix:
+Open file
+Choose correct code
+Remove extra lines
+Save and run:
+git add .
+git commit -m "fixed conflict"
+🔧 Fixing Mistakes (Very Important)
+🔸 Undo git add
+git reset fileName
+
+👉 Removes file from staging
+
+🔸 Undo Last Commit
+git reset HEAD~1
+
+👉 Goes one step back
+👉 Changes are still there (not deleted)
+
+🔸 Undo Multiple Commits
+git log
+git reset <commit-hash>
+🔸 Delete Everything (Danger ⚠️)
+git reset --hard <commit-hash>
+
+👉 Removes all changes permanently
+
+🔹 Forking (Working on Others’ Projects)
+
+👉 Fork means:
+Make a copy of someone else’s project
+
+Steps:
+Fork repo on GitHub
+Make changes
+Push to your repo
+Create Pull Request
+
+👉 Owner checks and may accept your changes
+
+📌 Important Tips
+
+✔ Always write meaningful commit messages
+✔ Use branches when working in a team
+✔ Pull latest code before starting work
+✔ Avoid using --hard unless necessary
+
+🧠 Final Easy Summary
+
+Git works in 3 simple steps:
+
+👉 Add → Commit → Push
+
+And remember:
+
+add → select files
+commit → save changes
+push → upload

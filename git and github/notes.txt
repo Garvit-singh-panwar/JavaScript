@@ -1,0 +1,81 @@
+git ?
+git  is a free open source verson control system 
+
+a tool helps to track changes in code 
+for ex if we are making a website we need we first write our forntEnd code then backend code and we add some logics in it 
+in steps first simple things then little bit advance then aadvance and we commited it now we want to change our advance code
+so now what can we do we can manualy do it we can delete all the code and change it 
+or we can do it using github it tracks our every code changes so from where we want to rewrite the code we see that commit we can track the history of our code when we commit what (means when we did changes in our old code) 
+even if we want to go back to css code and restart writing js we can track back to css code and it automatically removes the new code and retrive your old css code 
+
+more advantages are
+whenever we work in group  
+let suppose we have a porject and in that 4 dev are working on a project 
+so how can they share code when ever we share code like this there version control works 
+they track how much code dev 1 wrote how much dev 2 , and dev 3 and 4 
+see are they changes the code in the same file  or if changes whose code it has to kept 
+like these many type of problems version control track 
+it also help in colaboration
+git is vary fast and scalable which helps us works with big problems 
+
+-------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------
+
+what is github ?
+github is a website where we host repositories online 
+
+🧠 Git & GitHub – Quick Notes
+🔹 What is Git?
+Git is a free & open-source version control system
+It helps to track changes in code
+
+👉 Simple meaning:
+Git = tool that remembers every change in your code
+
+🔹 Why we use Git?
+✅ 1. Track Changes
+Saves code step by step (commits)
+You can see:
+what changed
+when changed
+✅ 2. Go Back to Old Code
+If new code breaks ❌
+You can go back to old version ✅
+
+👉 No need to delete code manually
+
+✅ 3. Work Safely
+Your old code is never lost
+You can experiment without fear
+✅ 4. Team Work (Collaboration)
+Many developers can work together
+Git tracks:
+who wrote code
+what changes were made
+
+👉 Helps manage conflicts (same file edits)
+
+✅ 5. Fast & Scalable
+Works well even for big projects
+🔹 Important Terms
+Repository (Repo) → Project folder
+Commit → Saved version of code
+Branch → Separate line of work
+Merge → Combine code
+🔹 What is GitHub ?
+GitHub is a website to store your Git projects online
+
+👉 Simple meaning:
+GitHub = online storage for your code
+
+🔹 Git vs GitHub
+Git	GitHub
+Tool (software)	Website
+Tracks code changes	Stores code online
+Works offline	Needs internet
+🔹 Easy Example
+Git = 📓 Notebook (tracks your work)
+GitHub = ☁️ Cloud storage (stores your notebook online)
+🔹 One-Line Revision
+
+👉 Git = tracks code changes
+👉 GitHub = stores code online
