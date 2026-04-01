@@ -1,0 +1,43 @@
+Library Or Framework :
+
+Library or framework both are prewritten code but library has less control over the porject where as framework has more control over it 
+Library defines a small part in our project  where as framework define overall structire of our project
+
+means you can use library where you want to use it but framework tells you where to use it and how to use it you have to work according to the framework but library works according to your need  
+
+Express :- 
+Express is a node.js web application framework that help us to make web application 
+it is used for server side programming 
+there are for major useg of express :
+1.It listens for incomming request 
+2. it parse request 
+3. match response with routes 
+
+routing : routing is a process of selecting path for a traffic in a network or between or accross multiple network 
+In the back-end, Routing is how an application’s endpoints (URIs) respond to client requests. It tells the server: "When a request comes in for this address with this method, run this specific function."
+
+2. The Structure of a Back-End Route
+A route is defined by three main parts:
+The Method (Action): What is the user trying to do? (GET, POST, PUT, DELETE).
+The Path (Address): Where is the user going? (e.g., /api/users or /login).
+The Handler (Logic): The function that talks to the Database and sends back a response.
+
+Imagine a busy restaurant kitchen:
+The Client: The Customer at a table.
+The Request: The Customer tells the Waiter, "I want a Pizza" (GET /pizza).
+The Router (The Waiter): The waiter takes that specific request to the Pizza Station in the kitchen. He doesn't take it to the Salad station.
+The Handler (The Chef): The chef at the Pizza station prepares the food (logic/database work) and gives it to the waiter to take back to the customer.
+
+lets first talk about app.get method 
+whenever a get request comes to our browser it will respond  
+it checks the path if the path matches it executes the callback   
+"/" is our root path 
+app.get("/" , (req,res)=>{
+    res.send("this is root path");
+})
+
+if we want to sent response to the path which we havent define we give path "*" 
+
+app.get("*", (req,res)=>{
+    res.send("this path is not define");
+})
