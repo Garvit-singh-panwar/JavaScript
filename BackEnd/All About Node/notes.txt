@@ -1,0 +1,71 @@
+What is Node.js?
+Definition: Node.js is a JavaScript Runtime Environment.
+
+
+ The "Power-Up" :  Traditionally, JavaScript could only run inside a web browser (like Chrome or Safari). Node.js allows JavaScript to run outside the browser, directly on your computer or a server.
+ What it is NOT :  It is not a programming language (it uses JavaScript), and it is not a library or a framework. It is the "engine" that lets the code run.
+ Use Case       :   It is primarily used for Server-Side Programming (building APIs, handling databases, and managing back-end logic)
+
+Browser vs. Node.js (Crucial Differences)
+While both run JavaScript, their "toolkits" are different:
+Feature	Browser	Node.js
+DOM / HTML	Can manipulate elements (e.g., document.getElementById).	No DOM access. It cannot see or change HTML elements.
+Global Object	The top-level object is window.	The top-level object is global.
+System Access	Restricted for security (cannot access your files easily).	Full access to the file system, hardware, and network.
+
+
+Node REPL (Interactive Shell)
+REPL stands for Read, Eval (Evaluate), Print, Loop.
+
+ What it is    :   Think of it as the "Console" tab of your browser, but inside your terminal/command prompt.
+ How to use it :   You simply type node in your terminal, and you can start writing JavaScript line-by-line.
+ Why use it    :   It’s perfect for testing small snippets of code, doing math, or checking how a specific JavaScript method works without creating a full file.
+
+Key REPL Features:
+
+Read   : It takes your input.
+Eval   : It executes (evaluates) the code.
+Print  : It shows you the result immediately.
+Loop   : It waits for your next command.
+
+
+.help Command: If you type .help inside the REPL, it lists all available meta-commands (like .exit, .save, or .load).
+
+
+How to Run JS files with the help of Node   :   to run javascript file using node we have to be in that folder then we have to write command :- node fileName.js   
+
+Process Object  :   this object provide information about , and control over current nodejs process.
+Process.args    :   returns an array containing the command-line agruments passed when node js process was launched 
+
+Module.exports  :   It is used to send something it can be a function or a value or a object or a array from one file to another 
+syntax  =   module.exports = something;
+
+require         :   It is a function which is used to retrive or fetch those data which you send using module.exports  
+syntax  =   require(filename.js)
+
+in morden js we can do it like this 
+
+for export we use               export.default something          or      export {something}
+                              ( for this type of export  )             ( for this type of export)
+                                           |                                       |
+                                           V                                       V
+to retrive them we use          import something form "./file"    or      import {something} from "./file"
+
+to allow import export like this in modern js in our node we can do two things 
+1. in our package.json we can define "type" : "module" 
+2.`we can create file with mjs extension 
+if we did none of this it will create problem we have to do any one of them if we want to use import export like modern js
+
+npm (node package manager) :
+
+what is a package ? 
+package is someone else written code which we can use in our project 
+think of nmp as a library of packages and packages as a book of library 
+if you want to use it take it from npm 
+
+package.json: the package.json contain descriptive and functional matadata about a project such as name version and dependencies
+
+it is used to download nodemodules if it get deleted if we want to send our project to friends we can git it without nodemodules in his computer we can open that project and in terminal he just write command npm install unsing this command our nodemodules get install 
+
+if we are making a project we can make our own project.json using command npm init 
+and if we want to get default data in our package.json we can write command npm init -y
