@@ -1,0 +1,72 @@
+Folder Structure:-
+
+what we are doing we have a folder where we generate our package.json  here we are making all the files of our backend and every file we are creating here  here our readability is very poor because the intend of every files are not same 
+
+our main file is server.js 
+if we want to make multiple api routes we have to create routes for that to do that we need router ex app.get , app.post 
+prev we define this  in server.js let say we have 20 routes so did our readability increase  no 
+so we saperate our routing part wehere we define routes or router logic 
+now we have this index or server.js file  here we create our routes folder where we define all our routes
+when hit this route we perform some action means this route is linked with some business logic 
+And this business logic is kept inside a controllers Folder  
+for ex i made a form where i create four field name email phone no or remark and put a submit button
+whenever someone click that button  i want this all four detail will send to facebook.com 
+fetching , aggregate and sending this details to facebook are the works of controller 
+another folder is models
+let say i want to create a schema means you gave a description of what entry you want to create in the database 
+like here you want to put here firstname, here DoB , here lastname , here signature , and also about there data types 
+so the data you want to insert here you provide a description a structure for it 
+
+
+
+1. The Entry Point: server.js
+Think of this as the Reception Desk. It doesn't do the heavy lifting; it just initializes the server, connects to the database, and tells the app where to find the routes.
+
+Your logic: Instead of writing 20 app.get calls here, you just "use" a router file.
+Correction: Keep this file clean. Only include middleware (like express.json()) and the main listener.
+
+
+2. The Routes Folder: routes/
+This is the Signpost. It maps the URL (the endpoint) to a specific function. It doesn't know how to send data to Facebook; it only knows who to call when someone hits /submit-form.
+
+Example: userRoutes.js
+JavaScript
+router.post('/submit-form', userController.sendToFacebook);
+
+
+3. The Controllers Folder: controllers/
+This is the Brain. This is where your business logic lives. Like you said, fetching the form data, validating it, and then using an API to send it to Facebook happens here.
+
+Simplified Example:
+
+1.Receive name, email, phone, remark from the request body.
+2.Process or "aggregate" the data.
+3.Send a request to Facebook’s API.
+4.Send a "Success" or "Error" response back to the user.
+
+4. The Models Folder: models/
+This is the Blueprint. Before you can save or move data, you need to define what that data looks like. This ensures you don't accidentally send a "Signature" where a "Phone Number" should be.
+
+Your Example (Schema):
+If you are using Mongoose (MongoDB), your model defines the "Shape" of the data:
+
+Name: String
+
+Email: String (must be unique)
+
+DoB: Date
+
+Phone: Number
+
+
+Visualizing the Flow
+Component	Responsibility	Simple Analogy
+Routes	Define the URL paths.	The Menu in a restaurant.
+Controllers	Handle the logic and requests.	The Chef who decides how to cook.
+Models	Define the data structure.	The Recipe/Ingredients list.
+Why this is better:
+
+Readability: If there is a bug in your Facebook integration, you go straight to controllers/. If you want to add a new page, you go to routes/.
+Reusability: You can use the same Model in different Controllers without rewriting code.
+
+Collaboration: One person can work on the database Schema (Models) while another builds the API logic (Controllers).
