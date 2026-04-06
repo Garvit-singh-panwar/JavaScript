@@ -3,12 +3,12 @@ import Blog from "../models/blog.js";
 const createBlog = async (req,res)=>{
     
     try {
-        const {author , title , description} = req.body;
+        const {author , title , body} = req.body;
         const response = await Blog.create(
                                     {
                                         author: author,
                                         title: title,
-                                        description: description,
+                                        body: body,
                                     }
                                 );
         res.status(200)

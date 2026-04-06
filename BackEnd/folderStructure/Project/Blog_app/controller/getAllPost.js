@@ -2,7 +2,7 @@ import Blog from "../models/blog.js";
 
 const getAllPost = async (req,res)=>{
     try {
-        const blogs = await Blog.find({});
+        const blogs = (await Blog.find({}).populate("comments").populate("likes").populate("dislikes").exec());
 
         if(!blogs){
             return res.status(404).json(

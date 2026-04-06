@@ -14,20 +14,31 @@ const BlogSchema = new mongoose.Schema(
             required: true,
             maxLength: 100,
         },
-        description:{
+        body:{
             type: String,
             required: true,
         },
-        likes: {
-            type: Number,
-            default: 0,
-        },
-        unlike: {
-            type: Number,
-            default: 0,
-        }
-
-    }
+        likes:[
+            {
+                type: mongoose.Types.ObjectId,
+                ref : "Likes"
+            },
+        ],
+        dislikes:[
+            {
+                type: mongoose.Types.ObjectId,
+                ref : "Dislikes"
+            },
+        ],
+        comments:[
+            {
+                type: mongoose.Types.ObjectId,
+                ref : "Comments"
+            },
+        ],
+        
+    },
+    { timestamps: true }
 );
 
 

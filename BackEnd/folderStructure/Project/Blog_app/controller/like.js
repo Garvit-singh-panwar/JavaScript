@@ -1,34 +1,53 @@
-import blog from "../models/blog.js";
+import Likes from "../models/likes.js";
+import Blog from "../models/blog.js";
 
-const likeBlog = async (req , res)=>{
+
+const likeController = async (req , res)=>{
         try {
-            const {id} = req.params;
+            const {  id  } = req.params;
+            const { user } = req.body;
 
-            if(!id){
-                return res.status(404)
+            if(!id || !user){
+                return res.status(400)
                 .json(
                     {
                         success: false,
-                        message: "Blog ID is required",
+                        message: "Blog ID or User is required",
                     }
                 )
                 
             }
+            const haveBlog = await Blog.findById(id);
+            if(!haveBlog){
+                return res.status(404).json(
+                                                {
+                                                    success:false,
+                                                    message: "Blog not found for given Id"
+                                                }
+                                            );
+            }
 
-            const updatedBlog = await blog.findByIdAndUpdate(
+            const like =  new Likes({
+                blog: id, user: user
+            })
+
+            const updatedLike = await like.save();
+
+            const updatedBlog = await Blog.findByIdAndUpdate(
                                 id ,
                                 {
-                                    $inc:{likes: 1}
+                                    $push: {likes: updatedLike._id}
                                 },
                                 { new: true },
-                            );
+                            ).populate(("likes"))
+                            .exec();
 
             if(!updatedBlog){
                 return res.status(404)
                 .json(
                     {
                         success:false,
-                        message: "Blog not found for given ID",
+                        message: "some error occured in fetching updated blog",
                     }
                 )
             }
@@ -56,4 +75,4 @@ const likeBlog = async (req , res)=>{
         }
 }
 
-export {likeBlog};
+export {likeController}

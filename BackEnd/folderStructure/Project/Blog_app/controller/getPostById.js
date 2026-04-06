@@ -4,7 +4,7 @@ const getPostById = async (req , res)=>{
     try {
         
         const {id} = req.params;
-        const blog = await Blog.findById(id);
+        const blog = await Blog.findById(id).populate("likes").populate("dislikes").populate("comments").exec();
 
         if(!blog){
             return res.status(404).json(
