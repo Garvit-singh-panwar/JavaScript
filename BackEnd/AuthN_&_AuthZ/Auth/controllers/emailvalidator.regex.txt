@@ -1,0 +1,46 @@
+A regex (regular expression) is a pattern used to check if a string follows certain rules.
+For email validation, the regex:
+
+js
+/^\S+@\S+\.\S+$/
+means:
+
+^ → start of the string
+
+\S+ → one or more non-space characters (the part before @)
+
+@ → must contain @
+
+\S+ → one or more non-space characters (the domain name)
+
+\. → must contain a dot
+
+\S+$ → one or more non-space characters after the dot (like com, org, in)
+
+So it ensures the email looks like something@domain.com.
+
+--------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxx---------------------------------------
+
+⚙️ How It Works in Your Code
+When a user signs up:
+
+They type an email (e.g., abc@gmail.com).
+
+Your server runs the regex test:
+
+js
+if (!emailRegex.test(email)) {
+  return res.status(400).json({ message: "Enter a valid email address" });
+}
+If the email doesn’t match the pattern (like abc@.com or abc@xyz), it rejects the signup.
+
+If it matches, you continue with password validation, hashing, and saving.
+
+---------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------
+
+✅ Why It’s Useful
+Prevents obvious mistakes (like missing @ or .).
+
+Works for any provider (gmail.com, yahoo.com, company.org).
+
+Keeps your database clean — no junk emails.

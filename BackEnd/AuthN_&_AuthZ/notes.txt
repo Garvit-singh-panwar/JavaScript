@@ -1,0 +1,61 @@
+Anuthentication means Id varification email password
+Authorization means access rights  see this to understand 
+
+Authentication means who you are Authorization means what things can you access 
+if you are are a free user you can only access the things which are free
+if you are paid you can only access the thing for which you paid 
+if you are admin you can access everything
+                                                        Website
+                                                            |
+                                                            |
+                                                            V
+                                       |------------------Login
+                                       |                    |
+                                      Admin                _|_______
+                                    /                     /         \
+                                dashboard                /           \
+                                Admin               course buy      no course
+                                                       /               \
+                                                 dashboard            dashboard
+                                                     /                   \
+                                                course detail           no course detail   
+
+
+different peoples -> different roles -> different permissions 
+       |                    |                     |
+    student  -------->   learner  ---------->  course   
+       |                    |                     |
+    teacher --------->   Teaching ---------->  schedule or student progress
+       |                    |                     |
+     Admin  --------->   manager  ---------->  Everything
+
+
+     JWT :  JSON web token 
+
+     JWT is a secured way to transfer information  
+     whenever you login to a web application you server generates a  JWT token 
+     it is made up of three things 
+     1. header      ----->   define         --->    hashing algorithm or (type -> JWT) 
+     2. payload     ----->   contain data   --->    userId , userName , userRole
+     3. signature   ----->   contain key    --->    secret which identify you any string
+
+    it generates a Json web token (JWT) which contain all this data 
+    this token is given to clint by your server 
+    clint use this token again and again in different different areas in that application so does'nt need to login again and again 
+    he just have to login one time
+    clint use this jwt token in eveery req  to prove his authenticity
+
+
+    Cookies :
+
+    Cookies are the small text file which you can store in your local pc 
+    using cookies your login information is saved 
+    using cookies we saved the data in our shoping cart 
+    using cookies you store the priferences
+    you added 3 items in your cart you closed that tab but when you open it they are still saved this is because of cookies
+    when ever you login to a web application if your server want(depends on code) it can create a cookie and give it to you 
+    that store your session data  , preferences , individual specific data and give that cookie to you as a response
+    if you want you can use this cookie on other request and achive the authorization 
+
+
+    you can achive authorization using both  
