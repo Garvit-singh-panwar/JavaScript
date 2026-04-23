@@ -1,0 +1,31 @@
+
+
+config-----------cloudnary.js------connectDb.js
+                      |                 |
+                      |                 |
+                      |                 |
+                      |                 |
+index.js---------|----|-----------------|
+    |            |------------|
+  work                        |                     
+    |-app listen              |
+    |-route mounting          |
+    |-middlewares             |
+    |-Dbconnection            |
+    |-cloudnary setup         |
+    |-default route           |                                                      
+    |                         |
+    |                         |                                       Cloudnary cloud storage
+    |                         |                                                 |  
+    |-env                     |                                                 V                   
+                |--------------                                          m gives|(img/vdo/file)->URL
+                |                                                               |
+Routes------fileupload.js-------                   controllers                  ^            models
+                |                                       |                 upload|Img/Vdo/File  |      
+                |                                       |                       |              |
+               paths                                    V                       V----Url----file.js------>Url->DB
+                |                                       |                       |         fileModelSchema
+            /image.upload----------------------imageUpload.Controller.js--------|             |-name
+            /videoUpload-----------------------videoUpload.Controller.js--------|             |-tags
+            /imagereduceUpload-----------------imagereduceupload.Controller.js--|             |-email
+            /localfileUpload-------------------localfileUpload.Controller.js----|             |-files
