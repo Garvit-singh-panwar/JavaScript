@@ -1,0 +1,26 @@
+Pre and Post middlewares
+
+
+the post middlewares work is after creating the entry your middleware will invoke let say i have to do some work before creating a entry then i can use a pre middleware instead of post if i want to do some work after creating a entry in DB i use post middleware 
+
+POST middleware are executed after the hooked method and all its pre middleware have completed 
+Pre middleware are excuted before the hooked method 
+
+
+we use it in sending mail after creating a entry in database
+
+DB-entry------>sending email
+
+
+NOdemailler = used to send emails a package 
+how to use 
+
+1. install it 
+2. import it 
+3. make its transporter
+4. send email using transporter
+
+see them in documentation
+
+
+socket.io private message documentation ->  https://socket.io/get-started/private-messaging-part-1/

@@ -8,7 +8,11 @@ import upload from "./routes/upload.routes.js";
 
 const app = express();
 app.use(express.json());
-app.use(fileUpload());
+app.use(fileUpload({
+        useTempFiles : true,
+        tempFileDir : '/tmp/'
+    }
+));
 
 app.use("/api/v1/upload",upload);
 
